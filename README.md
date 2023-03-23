@@ -10,6 +10,7 @@ Projeto para a disciplina MC426 (Engenharia de Software) da Unicamp.
 
 Projeto criado por:
 
-<!--- Adicione seu nome abaixo -->
+<!--- Adicione seu nome e RA abaixo -->
 
-- Mariana Izumizawa
+- Mariana Megumi Izumizawa - 221859
+- Jonas Cardoso Gonçalves - 256453
