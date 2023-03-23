@@ -14,3 +14,4 @@ Projeto criado por:
 
 - Mariana Megumi Izumizawa - 221859
 - Jonas Cardoso Gonçalves - 256453
+- Camila Porfírio da Silva Pinto - 195334
