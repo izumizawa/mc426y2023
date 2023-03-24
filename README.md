@@ -16,3 +16,4 @@ Projeto criado por:
 - Jonas Cardoso Gonçalves - 256453
 - Camila Porfírio da Silva Pinto - 195334
 - Thales Iwashima Andrade - 187462
+- João Victor Pereira de Andrade - 174817
