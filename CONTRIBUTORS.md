@@ -1,5 +1,5 @@
 1 - Jonas Cardoso Gonçalves (RA256453)
-2 - Nome do Fulano  (RAXXXXX)
+2 - Mariana Megumi Izumizawa  (RA221859)
 3 - Nome do Fulano  (RAXXXXX)
 4 - Nome do Fulano  (RAXXXXX)
 5 - Nome do Fulano  (RAXXXXX)
