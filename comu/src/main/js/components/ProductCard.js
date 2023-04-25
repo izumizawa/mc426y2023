@@ -9,7 +9,7 @@ import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import EditIcon from "@mui/icons-material/Edit";
 
-export default function DishCard(props) {
+export default function ProductCard(props) {
   const theme = useTheme();
 
   return (
