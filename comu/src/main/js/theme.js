@@ -17,7 +17,7 @@ const theme = createTheme({
     error: {
       extralight: "#FCEEEE",
       light: "#F5C7C7",
-      main: "#E57373",
+      main: "#F30858",
       dark: "#941C1C",
       contrastText: "#FFF",
     },
@@ -123,7 +123,7 @@ const theme = createTheme({
     caption: {
       fontFamily: "'Montserrat', 'Roboto'",
       fontSize: "0.75rem",
-      lineHeight: 0.8,
+      lineHeight: "1.2",
     },
     overline: {
       fontSize: "0.625rem",
