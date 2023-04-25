@@ -57,6 +57,7 @@ export default function NewProductButton() {
             campos abaixo.
           </DialogContentText>
           <TextField
+            required
             margin="normal"
             autoFocus="true"
             label="Nome do Produto"
@@ -64,6 +65,7 @@ export default function NewProductButton() {
             size="small"
           />
           <TextField
+            required
             margin="normal"
             label="Preço"
             fullWidth
@@ -76,6 +78,7 @@ export default function NewProductButton() {
             }}
           />
           <TextField
+            required
             margin="normal"
             label="Descrição"
             fullWidth
@@ -84,6 +87,7 @@ export default function NewProductButton() {
             helperText="Informe melhor as pessoas sobre este produto incluindo uma breve descrição sobre ele. Você pode colocar, por exemplo, o peso e os ingredientes utilizados."
           />
           <TextField
+            required
             margin="normal"
             label="Categoria"
             fullWidth
