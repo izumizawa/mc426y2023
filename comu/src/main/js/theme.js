@@ -1,3 +1,4 @@
+import React from "react";
 import { createTheme } from "@mui/material/styles";
 // https://mui.com/material-ui/customization/default-theme/?expand-path=$.palette
 
@@ -5,18 +6,18 @@ const theme = createTheme({
   palette: {
     paperdark: { main: "#424242" },
     primary: {
-      extralight: "#ece1f8",
-      main: "#7300E7",
-      dark: "#21006F",
+      extralight: "#E4F1F3",
+      light: "#A5CFD9",
+      main: "#1E879F",
+      dark: "#125868",
     },
     secondary: {
-      main: "#4ADB7A",
-      dark: "#15AB46",
+      main: "#e97424",
     },
     error: {
       extralight: "#FCEEEE",
       light: "#F5C7C7",
-      main: "#F30858",
+      main: "#E57373",
       dark: "#941C1C",
       contrastText: "#FFF",
     },
@@ -45,7 +46,7 @@ const theme = createTheme({
       secondary: "rgba(55,65,81,.54)",
     },
     background: {
-      default: "#FAFBFF",
+      default: "#F3F4F6",
       paper: "#fff",
     },
   },
@@ -53,7 +54,7 @@ const theme = createTheme({
     borderRadius: 8,
   },
   shadows: {
-    1: "0px 3px 30px rgba(160, 175, 255, 0.12)",
+    1: "0 1px 1px rgba(0,0,0,.05)",
   },
   typography: {
     h1: {
@@ -76,7 +77,7 @@ const theme = createTheme({
     h4: {
       fontFamily: "'Montserrat', 'Roboto'",
       fontSize: "1.125rem",
-      fontWeight: 600,
+      fontWeight: 500,
       lineHeight: 1.222,
     },
     h5: {
@@ -122,7 +123,7 @@ const theme = createTheme({
     caption: {
       fontFamily: "'Montserrat', 'Roboto'",
       fontSize: "0.75rem",
-      lineHeight: "1.2",
+      lineHeight: 0.8,
     },
     overline: {
       fontSize: "0.625rem",
