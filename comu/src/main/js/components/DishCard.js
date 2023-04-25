@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
+import Tooltip from "@mui/material/Tooltip";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import EditIcon from "@mui/icons-material/Edit";
@@ -24,6 +25,7 @@ export default function DishCard(props) {
           display: "flex",
           flexDirection: "column",
           padding: "8px 16px",
+          width: "470px",
         }}
       >
         <Box
@@ -37,9 +39,11 @@ export default function DishCard(props) {
           <Typography variant="overline" color="primary">
             {props.category}
           </Typography>
-          <IconButton size="small">
-            <EditIcon fontSize="small" />
-          </IconButton>
+          <Tooltip title="Editar informações">
+            <IconButton size="small">
+              <EditIcon fontSize="small" />
+            </IconButton>
+          </Tooltip>
         </Box>
         <Typography variant="subtitle1">{props.title}</Typography>
         <Typography variant="body2" color="text.secondary" align="justify">
