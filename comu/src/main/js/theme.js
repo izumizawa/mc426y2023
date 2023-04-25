@@ -6,13 +6,13 @@ const theme = createTheme({
   palette: {
     paperdark: { main: "#424242" },
     primary: {
-      extralight: "#E4F1F3",
-      light: "#A5CFD9",
-      main: "#1E879F",
-      dark: "#125868",
+      extralight: "#ece1f8",
+      main: "#7300E7",
+      dark: "#21006F",
     },
     secondary: {
-      main: "#e97424",
+      main: "#4ADB7A",
+      dark: "#15AB46",
     },
     error: {
       extralight: "#FCEEEE",
@@ -46,7 +46,7 @@ const theme = createTheme({
       secondary: "rgba(55,65,81,.54)",
     },
     background: {
-      default: "#F3F4F6",
+      default: "#FAFBFF",
       paper: "#fff",
     },
   },
@@ -54,7 +54,7 @@ const theme = createTheme({
     borderRadius: 8,
   },
   shadows: {
-    1: "0 1px 1px rgba(0,0,0,.05)",
+    1: "0px 3px 30px rgba(160, 175, 255, 0.12)",
   },
   typography: {
     h1: {
@@ -77,7 +77,7 @@ const theme = createTheme({
     h4: {
       fontFamily: "'Montserrat', 'Roboto'",
       fontSize: "1.125rem",
-      fontWeight: 500,
+      fontWeight: 600,
       lineHeight: 1.222,
     },
     h5: {
