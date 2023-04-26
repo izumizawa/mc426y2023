@@ -30,6 +30,7 @@ export default function NewProductButton() {
         variant="outlined"
         startIcon={<AddIcon />}
         onClick={handleClickOpen}
+        sx={{ marginBottom: "32px" }}
       >
         Incluir produto ao cardápio
       </Button>
