@@ -7,27 +7,38 @@ import CardMedia from "@mui/material/CardMedia";
 import Tooltip from "@mui/material/Tooltip";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
-import EditIcon from "@mui/icons-material/EditRounded";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogTitle from "@mui/material/DialogTitle";
+import DialogContentText from "@mui/material/DialogContentText";
 import InputAdornment from "@mui/material/InputAdornment";
 import Divider from "@mui/material/Divider";
+import EditIcon from "@mui/icons-material/EditRounded";
 import CloseIcon from "@mui/icons-material/CloseRounded";
+import DeleteIcon from "@mui/icons-material/DeleteRounded";
 
 export default function ProductCard(props) {
   const theme = useTheme();
-  const [open, setOpen] = React.useState(false);
+  const [openEdit, setOpenEdit] = React.useState(false);
+  const [openDelete, setOpenDelete] = React.useState(false);
 
-  const handleClickOpen = () => {
-    setOpen(true);
+  const handleClickOpenEdit = () => {
+    setOpenEdit(true);
   };
 
-  const handleClose = () => {
-    setOpen(false);
+  const handleCloseEdit = () => {
+    setOpenEdit(false);
+  };
+
+  const handleClickOpenDelete = () => {
+    setOpenDelete(true);
+  };
+
+  const handleCloseDelete = () => {
+    setOpenDelete(false);
   };
 
   return (
@@ -58,11 +69,18 @@ export default function ProductCard(props) {
             <Typography variant="overline" color="primary">
               {props.category}
             </Typography>
-            <Tooltip title="Editar informações">
-              <IconButton size="small" onClick={handleClickOpen}>
-                <EditIcon fontSize="small" />
-              </IconButton>
-            </Tooltip>
+            <Stack direction="row" spacing={0.5}>
+              <Tooltip title="Editar informações">
+                <IconButton size="small" onClick={handleClickOpenEdit}>
+                  <EditIcon fontSize="small" />
+                </IconButton>
+              </Tooltip>
+              <Tooltip title="Excluir Produto">
+                <IconButton size="small" onClick={handleClickOpenDelete}>
+                  <DeleteIcon fontSize="small" />
+                </IconButton>
+              </Tooltip>
+            </Stack>
           </Box>
           <Typography variant="subtitle1">{props.title}</Typography>
           <Typography variant="body2" color="text.secondary" align="justify">
@@ -91,14 +109,14 @@ export default function ProductCard(props) {
           </Box>
         </Box>
       </Card>
-      <Dialog open={open} onClose={handleClose}>
+      <Dialog open={openEdit} onClose={handleCloseEdit}>
         <DialogTitle sx={{ p: 2 }}>
           <Typography variant="h2" align="center">
             Editar Produto
           </Typography>
           <IconButton
             aria-label="close"
-            onClick={handleClose}
+            onClick={handleCloseEdit}
             sx={{
               position: "absolute",
               right: 8,
@@ -154,10 +172,45 @@ export default function ProductCard(props) {
           />
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose} color="error">
+          <Button onClick={handleCloseEdit} color="error">
             Cancelar
           </Button>
-          <Button onClick={handleClose}>Incluir Produto</Button>
+          <Button onClick={handleCloseEdit}>Salvar</Button>
+        </DialogActions>
+      </Dialog>
+      <Dialog open={openDelete} onClose={handleCloseDelete}>
+        <DialogTitle sx={{ p: 2 }}>
+          <Typography variant="h2" align="center">
+            Excluir Produto
+          </Typography>
+          <IconButton
+            aria-label="close"
+            onClick={handleCloseDelete}
+            sx={{
+              position: "absolute",
+              right: 8,
+              top: 10,
+            }}
+          >
+            <CloseIcon />
+          </IconButton>
+        </DialogTitle>
+        <Divider variant="middle" />
+        <DialogContent>
+          <DialogContentText>
+            <b>Tem certeza que deseja excluir este produto do seu cardápio? </b>
+            <br />
+            Essa ação é irreversível. Caso você queira que este produto volte
+            para o cardápio após a sua exclusão, você terá que incluí-lo
+            novamente de forma manual, clicando no botão de "Incluir Produto ao
+            Cardápio".
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleCloseDelete}>Cancelar</Button>
+          <Button onClick={handleCloseDelete} color="error">
+            Excluir Produto
+          </Button>
         </DialogActions>
       </Dialog>
     </div>
