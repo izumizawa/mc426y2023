@@ -123,13 +123,12 @@ export default function ProductCard(props) {
             <Stack direction="row" spacing={0.5}>
               <Typography
                 variant="overline"
-                color="text.secondary"
-                align="rigth"
+                align="right"
                 color="primary.dark"
               >
                 R$
               </Typography>
-              <Typography variant="h4" align="rigth" color="primary">
+              <Typography variant="h4" align="right" color="primary">
                 {props.price}
               </Typography>
             </Stack>
@@ -158,7 +157,7 @@ export default function ProductCard(props) {
           <TextField
             required
             margin="normal"
-            autoFocus="true"
+            autoFocus={true}
             label="Nome do Produto"
             fullWidth
             size="small"

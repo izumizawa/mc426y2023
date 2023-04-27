@@ -1,0 +1,136 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductCard match ProductCard snapshot 1`] = `
+<div>
+  <div
+    className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-g808ha-MuiPaper-root-MuiCard-root"
+  >
+    <img
+      alt=""
+      className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-16r9ltv-MuiCardMedia-root"
+      src="donuts.jpg"
+    />
+    <div
+      className="MuiBox-root css-1xfnowe"
+    >
+      <div
+        className="MuiBox-root css-uudpsy"
+      >
+        <span
+          className="MuiTypography-root MuiTypography-overline css-12wmnug-MuiTypography-root"
+        >
+          Donuts de brigadeiro com granulado
+        </span>
+        <div
+          className="MuiStack-root css-j6p7hn-MuiStack-root"
+        >
+          <button
+            aria-label="Editar informações"
+            aria-labelledby={null}
+            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root"
+            data-mui-internal-clone-element={true}
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onContextMenu={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={0}
+            type="button"
+          >
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+              data-testid="EditRoundedIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M3 17.46v3.04c0 .28.22.5.5.5h3.04c.13 0 .26-.05.35-.15L17.81 9.94l-3.75-3.75L3.15 17.1c-.1.1-.15.22-.15.36zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+              />
+            </svg>
+            <span
+              className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+          <button
+            aria-label="Excluir Produto"
+            aria-labelledby={null}
+            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root"
+            data-mui-internal-clone-element={true}
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onContextMenu={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={0}
+            type="button"
+          >
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+              data-testid="DeleteRoundedIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v10zM18 4h-2.5l-.71-.71c-.18-.18-.44-.29-.7-.29H9.91c-.26 0-.52.11-.7.29L8.5 4H6c-.55 0-1 .45-1 1s.45 1 1 1h12c.55 0 1-.45 1-1s-.45-1-1-1z"
+              />
+            </svg>
+            <span
+              className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+      </div>
+      <h6
+        className="MuiTypography-root MuiTypography-subtitle1 css-10wpov9-MuiTypography-root"
+      >
+        Donuts de brigadeiro com granulado
+      </h6>
+      <p
+        className="MuiTypography-root MuiTypography-body2 MuiTypography-alignJustify css-y6c3k3-MuiTypography-root"
+      >
+        Três deliciosas unidades de donuts, recheadas com brigadeiro da melhor qualidade e granulados coloridos – para adoçar sua tarde!
+      </p>
+      <div
+        className="MuiBox-root css-14q51gy"
+      >
+        <div
+          className="MuiStack-root css-j6p7hn-MuiStack-root"
+        >
+          <span
+            className="MuiTypography-root MuiTypography-overline MuiTypography-alignRight css-1rns5hl-MuiTypography-root"
+          >
+            R$
+          </span>
+          <h4
+            className="MuiTypography-root MuiTypography-h4 MuiTypography-alignRight css-scpiz2-MuiTypography-root"
+          >
+            23
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
