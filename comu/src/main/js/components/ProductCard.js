@@ -1,4 +1,4 @@
-import * as React from "react";
+import { useState, useEffect} from "react";
 import { useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
@@ -19,11 +19,16 @@ import Divider from "@mui/material/Divider";
 import EditIcon from "@mui/icons-material/EditRounded";
 import CloseIcon from "@mui/icons-material/CloseRounded";
 import DeleteIcon from "@mui/icons-material/DeleteRounded";
+import { deleteProductsFromCatalogue, editProduct } from "../config/firebase";
 
 export default function ProductCard(props) {
   const theme = useTheme();
-  const [openEdit, setOpenEdit] = React.useState(false);
-  const [openDelete, setOpenDelete] = React.useState(false);
+  const [openEdit, setOpenEdit] = useState(false);
+  const [openDelete, setOpenDelete] = useState(false);
+  const [title, setTitle] = useState(props.title);
+  const [description, setDescription] = useState(props.description);
+  const [price, setPrice] = useState(props.price);
+  const [category, setCategory] = useState(props.category);
 
   const handleClickOpenEdit = () => {
     setOpenEdit(true);
@@ -40,6 +45,28 @@ export default function ProductCard(props) {
   const handleCloseDelete = () => {
     setOpenDelete(false);
   };
+
+  const handleDelete = () => {
+    deleteProductsFromCatalogue("R3o4bdUuF3Til25xtrAn", props.id)
+    setOpenDelete(false);
+    props.updateProducts()
+  }
+
+  const handleEdit = () => {
+    const product = {
+      title: title,
+      price: price,
+      description: description,
+      category: category
+    }
+    editProduct(props.id, product)
+    setOpenEdit(false);
+    props.updateProducts()
+  }
+
+  const handleChange = stateSetter => event => {
+    stateSetter(event.target.value)
+  }
 
   return (
     <div>
@@ -135,7 +162,8 @@ export default function ProductCard(props) {
             label="Nome do Produto"
             fullWidth
             size="small"
-            value={props.title}
+            onChange={handleChange(setTitle)}
+            value={title}
           />
           <TextField
             required
@@ -149,7 +177,8 @@ export default function ProductCard(props) {
                 <InputAdornment position="start">R$</InputAdornment>
               ),
             }}
-            value={props.price}
+            onChange={handleChange(setPrice)}
+            value={price}
           />
           <TextField
             required
@@ -159,7 +188,8 @@ export default function ProductCard(props) {
             multiline
             size="small"
             helperText="Informe melhor as pessoas sobre este produto incluindo uma breve descrição sobre ele. Você pode colocar, por exemplo, o peso e os ingredientes utilizados."
-            value={props.description}
+            onChange={handleChange(setDescription)}
+            value={description}
           />
           <TextField
             required
@@ -168,14 +198,15 @@ export default function ProductCard(props) {
             fullWidth
             size="small"
             helperText="Divida seu cardápio em seções! As categorias podem ser 'Lanches', 'Sobremesas' e 'Bebidas', por exemplo."
-            value={props.category}
+            onChange={handleChange(setCategory)}
+            value={category}
           />
         </DialogContent>
         <DialogActions>
           <Button onClick={handleCloseEdit} color="error">
             Cancelar
           </Button>
-          <Button onClick={handleCloseEdit}>Salvar</Button>
+          <Button onClick={handleEdit}>Salvar</Button>
         </DialogActions>
       </Dialog>
       <Dialog open={openDelete} onClose={handleCloseDelete}>
@@ -208,7 +239,7 @@ export default function ProductCard(props) {
         </DialogContent>
         <DialogActions>
           <Button onClick={handleCloseDelete}>Cancelar</Button>
-          <Button onClick={handleCloseDelete} color="error">
+          <Button onClick={handleDelete} color="error">
             Excluir Produto
           </Button>
         </DialogActions>

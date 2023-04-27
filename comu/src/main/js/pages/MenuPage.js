@@ -2,8 +2,11 @@ import AppBar from "../components/AppBar";
 import ProductList from "../components/ProductList";
 import NewProductButton from "../components/NewProductButton";
 import Box from "@mui/material/Box";
+import { useState, useEffect } from 'react';
 
 function MenuPage() {
+  const [reload, setReload] = useState(false)
+
   return (
     <div>
       <AppBar />
@@ -16,8 +19,8 @@ function MenuPage() {
           alignItems: "center",
         }}
       >
-        <NewProductButton />
-        <ProductList />
+        <NewProductButton setReload={setReload} />
+        <ProductList reload={reload} setReload={setReload} />
       </Box>
     </div>
   );

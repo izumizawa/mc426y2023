@@ -1,4 +1,3 @@
-import * as React from "react";
 import { useTheme } from "@mui/material/styles";
 import ProductCard from "./ProductCard";
 import Stack from "@mui/material/Stack";
@@ -10,23 +9,34 @@ export default function ProductList(props) {
   const theme = useTheme();
   const [products, setProducts] = useState({docs: []})
 
-  useEffect(() => {
+  const updateProducts = () => {
     getProductsFromCatalogue("R3o4bdUuF3Til25xtrAn").then(e => {
       setProducts(e)
     })
+  }
+
+  useEffect(() => {
+    updateProducts();
   }, [])
 
+  useEffect(() => {
+    updateProducts();
+    props.setReload(false);
+  },[props.reload])
+
   const productsList = products.docs.map(function(productDoc) {
-    const product = productDoc.data()
+    const product = {id: productDoc.id, ...productDoc.data()}
     return (
       <ProductCard
+        id={product.id}
         key={product.title}
         category={product.category}
         title={product.title}
         description={product.description}
         price={product.price}
         image={Donuts}
-        image_description={product.image_description}
+        image_description=""
+        updateProducts={updateProducts}
       />
     )
   })

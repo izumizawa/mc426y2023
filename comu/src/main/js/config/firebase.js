@@ -1,5 +1,5 @@
 const { initializeApp } = require('firebase/app');
-const { getFirestore, collection, getDocs, where, query, doc, getDoc, documentId } = require('firebase/firestore');
+const { getFirestore, collection, getDocs, where, query, doc, setDoc, deleteDoc } = require('firebase/firestore');
 
 
 const firebaseConfig = {
@@ -35,4 +35,35 @@ async function getProductsFromCatalogue(catalogueId) {
   return products
 }
 
-export { getExamples, getProductsFromCatalogue };
+async function addProductsToCatalogue(catalogueId, product) {
+  const productsCol = collection(db, 'product');
+  const newProductRef = doc(productsCol);
+  const junctionCol = collection(db, 'junction_catalogue_product');
+  const newJunctionRef = doc(junctionCol);
+  const junction = {
+    catalogue: catalogueId,
+    product: newProductRef.id
+  }
+  await Promise.all([setDoc(newProductRef, product), setDoc(newJunctionRef, junction)]);
+}
+
+async function deleteProductsFromCatalogue(catalogueId, productId) {
+  const junctionCol = collection(db, 'junction_catalogue_product');
+  const junctionQ = query(junctionCol, where("catalogue", "==", catalogueId), where("product", "==", productId));
+  const junctions = await getDocs(junctionQ);
+  const junctionRefs = junctions.docs.map(junction => doc(junctionCol, junction.id));
+
+  const productsCol = collection(db, 'product');
+  const productRef = doc(productsCol, productId);
+
+  const refs = [...junctionRefs, productRef]
+  await Promise.all(refs.map(ref => deleteDoc(ref)));
+}
+
+async function editProduct(productId, product) {
+  const productsCol = collection(db, 'product');
+  const productRef = doc(productsCol, productId);
+  await setDoc(productRef, product)
+}
+
+export { getExamples, getProductsFromCatalogue, addProductsToCatalogue, deleteProductsFromCatalogue, editProduct };

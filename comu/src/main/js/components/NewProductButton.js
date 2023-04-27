@@ -1,4 +1,4 @@
-import * as React from "react";
+import { useState } from "react";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import Dialog from "@mui/material/Dialog";
@@ -12,9 +12,14 @@ import Divider from "@mui/material/Divider";
 import CloseIcon from "@mui/icons-material/CloseRounded";
 import Typography from "@mui/material/Typography";
 import AddIcon from "@mui/icons-material/AddRounded";
+import { addProductsToCatalogue } from "../config/firebase";
 
-export default function NewProductButton() {
-  const [open, setOpen] = React.useState(false);
+export default function NewProductButton(props) {
+  const [open, setOpen] = useState(false);
+  const [title, setTitle] = useState('');
+  const [price, setPrice] = useState('');
+  const [description, setDescription] = useState('');
+  const [category, setCategory] = useState('');
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -23,6 +28,22 @@ export default function NewProductButton() {
   const handleClose = () => {
     setOpen(false);
   };
+
+  const handleChange = stateSetter => event => {
+    stateSetter(event.target.value);
+  }
+
+  const handleInclude = () => {
+    const product = {
+      title: title,
+      price: price,
+      description: description,
+      category: category
+    }
+    addProductsToCatalogue("R3o4bdUuF3Til25xtrAn", product);
+    props.setReload(true);
+    setOpen(false);
+  }
 
   return (
     <div>
@@ -64,6 +85,7 @@ export default function NewProductButton() {
             label="Nome do Produto"
             fullWidth
             size="small"
+            onChange={handleChange(setTitle)}
           />
           <TextField
             required
@@ -72,6 +94,7 @@ export default function NewProductButton() {
             fullWidth
             multiline
             size="small"
+            onChange={handleChange(setPrice)}
             InputProps={{
               startAdornment: (
                 <InputAdornment position="start">R$</InputAdornment>
@@ -86,6 +109,7 @@ export default function NewProductButton() {
             multiline
             size="small"
             helperText="Informe melhor as pessoas sobre este produto incluindo uma breve descrição sobre ele. Você pode colocar, por exemplo, o peso e os ingredientes utilizados."
+            onChange={handleChange(setDescription)}
           />
           <TextField
             required
@@ -94,13 +118,14 @@ export default function NewProductButton() {
             fullWidth
             size="small"
             helperText="Divida seu cardápio em seções! As categorias podem ser 'Lanches', 'Sobremesas' e 'Bebidas', por exemplo."
+            onChange={handleChange(setCategory)}
           />
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose} color="error">
             Cancelar
           </Button>
-          <Button onClick={handleClose}>Incluir Produto</Button>
+          <Button onClick={handleInclude}>Incluir Produto</Button>
         </DialogActions>
       </Dialog>
     </div>
