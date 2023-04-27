@@ -47,6 +47,7 @@ test("opens and closes edit screen", () => {
     component.handleEdit(product);
   });
   card = component.toJson();
+  expect(card).toMatchSnapshot();
 });
 
 test("opens and closes delete screen", () => {
@@ -86,6 +87,7 @@ test("opens and closes delete screen", () => {
     component.handleDelete();
   });
   card = component.toJson();
+  expect(card).toMatchSnapshot();
 });
 
 test("opens and closes new product screen", () => {
