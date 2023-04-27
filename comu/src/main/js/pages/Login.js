@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { app } from "../config/firebase";
 import { useContext } from "react";
 import { UserContext } from "../contexts/UserContext";
-import { Navigate, useNavigate } from "react-router-dom";
+import { Navigate, useNavigate, Link as LinkRouter } from "react-router-dom";
 
 import {
   Button,
@@ -77,12 +77,11 @@ export default function Login() {
             Entrar
           </Button>
         </CardActions>
-        <Link
-          // TODO: link login with signup
-          href="/restaurantSignUp"
-          variant="body2">
-          Não possui uma conta? Faça seu cadastro
-        </Link>
+        <LinkRouter to="/restaurantSignUp">
+          <Link variant="body2">
+            Não possui uma conta? Faça seu cadastro
+          </Link>
+        </LinkRouter>
       </Card>
     </Container>
   );

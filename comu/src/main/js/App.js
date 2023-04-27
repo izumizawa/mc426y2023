@@ -8,9 +8,7 @@ import PrivateRoute from "./components/PrivateRoute";
 import NotFound from "./pages/NotFound";
 import RestaurantSignUp from "./pages/restaurantSignUp/RestaurantSignUp";
 
-const routes = [{ path: "/dashboard", component: <Dashboard /> },
-{ path: "/restaurantSignUp", component: <RestaurantSignUp /> }
-];
+const routes = [{ path: "/dashboard", component: <Dashboard /> }];
 
 function App() {
   return (
@@ -18,6 +16,8 @@ function App() {
       <UserStorage>
         <Routes>
           <Route path="/" element={<Login />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/restaurantSignUp" element={<RestaurantSignUp />} />
           {routes.map((item) => (
             <Route
               key={item.path}
