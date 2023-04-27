@@ -13,7 +13,7 @@ import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { validateEmail } from "../../helpers";
 import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link as LinkRouter } from "react-router-dom";
 
 function Copyright(props) {
   return (
@@ -269,13 +269,11 @@ export default function RestaurantSignUp() {
                 </Grid>
                 <Grid container justifyContent="flex-end">
                   <Grid item>
-                    <Link
-                      // TODO: navigate from signup to login and vs
-                      component="button"
-                      onClick={() => { navigate("/login"); }}
-                      variant="body2">
-                      Já possui uma conta? Faça login
-                    </Link>
+                    <LinkRouter to="/login">
+                      <Link variant="body2">
+                        Já possui uma conta? Faça login
+                      </Link>
+                    </LinkRouter>
                   </Grid>
                 </Grid>
               </Grid>

@@ -73,17 +73,17 @@ export default function Welcome() {
               Conheça nossa plataforma e faça parte
             </Typography>
             <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 4 }}>
-            <Grid container spacing={3}>                    
-              <Grid item xs={12}>
-              <Button
-                type="submit"
-                fullWidth
-                variant="contained"
-                sx={{ mb: 2 }}
-              >
-                Prosseguir para o cadastro
-              </Button>
-              </Grid>
+              <Grid container spacing={3}>
+                <Grid item xs={12}>
+                  <Button
+                    type="submit"
+                    fullWidth
+                    variant="contained"
+                    sx={{ mb: 2 }}
+                  >
+                    Prosseguir para o cadastro
+                  </Button>
+                </Grid>
               </Grid>
               <Copyright sx={{ mt: 8 }} />
             </Box>
