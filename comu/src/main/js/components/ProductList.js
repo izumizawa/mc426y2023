@@ -29,7 +29,7 @@ export default function ProductList(props) {
     return (
       <ProductCard
         id={product.id}
-        key={product.title}
+        key={product.id}
         category={product.category}
         title={product.title}
         description={product.description}
