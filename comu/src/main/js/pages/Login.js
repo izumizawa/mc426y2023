@@ -1,24 +1,32 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {app} from "../config/firebase";
 import {useContext} from "react";
 import {UserContext} from "../contexts/UserContext";
 import {Navigate} from "react-router-dom";
 
-import Container from "@mui/material/Container";
-import Card from "@mui/material/Card";
 import {
   Button,
+  Container,
+  Card,
   CardActions,
   CardContent,
   TextField,
   Typography,
+  Grid
 } from "@mui/material";
+import {validateEmail} from "../helpers";
+
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [emailError, setEmailError] = useState(false)
 
   const {loginWithEmail, login, loading} = useContext(UserContext);
+
+  const handleBlur = () => {
+    setEmailError(!validateEmail(email))
+  }
 
   const handleSubmit = () => {
     loginWithEmail(email, password);
@@ -36,19 +44,30 @@ export default function Login() {
       }}>
       <Card>
         <CardContent>
-          <Typography variant="h1" component="h2">
+          <Typography variant="h1" component="h2" sx={{marginBottom: '1rem'}}>
             Login
           </Typography>
-          <TextField
-            placeholder="E-mail"
-            value={email}
-            onChange={({target}) => setEmail(target.value)}
-          />
-          <TextField
-            placeholder="Senha"
-            value={password}
-            onChange={({target}) => setPassword(target.value)}
-          />
+          <Grid container spacing={2} >
+            <Grid item xs={12}>
+              <TextField
+                  sx={{width: '100%'}}
+                  label="E-mail"
+                  placeholder="E-mail"
+                  value={email}
+                  onChange={({target}) => setEmail(target.value)}
+                  onBlur={handleBlur}
+                  error={emailError}
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <TextField
+                  sx={{width: '100%'}}
+                  placeholder="Senha"
+                  value={password}
+                  onChange={({target}) => setPassword(target.value)}
+              />
+            </Grid>
+          </Grid>
         </CardContent>
         <CardActions>
           <Button variant="contained" onClick={handleSubmit} disabled={loading}>
