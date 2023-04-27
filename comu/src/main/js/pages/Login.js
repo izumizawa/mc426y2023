@@ -1,8 +1,8 @@
-import React, {useEffect, useState} from "react";
-import {app} from "../config/firebase";
-import {useContext} from "react";
-import {UserContext} from "../contexts/UserContext";
-import {Navigate} from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { app } from "../config/firebase";
+import { useContext } from "react";
+import { UserContext } from "../contexts/UserContext";
+import { Navigate, useNavigate } from "react-router-dom";
 
 import {
   Button,
@@ -12,17 +12,20 @@ import {
   CardContent,
   TextField,
   Typography,
-  Grid
+  Grid,
+  Link
 } from "@mui/material";
-import {validateEmail} from "../helpers";
+import { validateEmail } from "../helpers";
 
 
 export default function Login() {
+  const navigate = useNavigate();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState(false)
 
-  const {loginWithEmail, login, loading} = useContext(UserContext);
+  const { loginWithEmail, login, loading } = useContext(UserContext);
 
   const handleBlur = () => {
     setEmailError(!validateEmail(email))
@@ -44,27 +47,27 @@ export default function Login() {
       }}>
       <Card>
         <CardContent>
-          <Typography variant="h1" component="h2" sx={{marginBottom: '1rem'}}>
+          <Typography variant="h1" component="h2" sx={{ marginBottom: '1rem' }}>
             Login
           </Typography>
           <Grid container spacing={2} >
             <Grid item xs={12}>
               <TextField
-                  sx={{width: '100%'}}
-                  label="E-mail"
-                  placeholder="E-mail"
-                  value={email}
-                  onChange={({target}) => setEmail(target.value)}
-                  onBlur={handleBlur}
-                  error={emailError}
+                sx={{ width: '100%' }}
+                label="E-mail"
+                placeholder="E-mail"
+                value={email}
+                onChange={({ target }) => setEmail(target.value)}
+                onBlur={handleBlur}
+                error={emailError}
               />
             </Grid>
             <Grid item xs={12}>
               <TextField
-                  sx={{width: '100%'}}
-                  placeholder="Senha"
-                  value={password}
-                  onChange={({target}) => setPassword(target.value)}
+                sx={{ width: '100%' }}
+                placeholder="Senha"
+                value={password}
+                onChange={({ target }) => setPassword(target.value)}
               />
             </Grid>
           </Grid>
@@ -74,6 +77,12 @@ export default function Login() {
             Entrar
           </Button>
         </CardActions>
+        <Link
+          // TODO: link login with signup
+          href="/restaurantSignUp"
+          variant="body2">
+          Não possui uma conta? Faça seu cadastro
+        </Link>
       </Card>
     </Container>
   );
