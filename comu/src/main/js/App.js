@@ -4,10 +4,14 @@ import { UserStorage } from "./contexts/UserContext";
 
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
+import MenuPage from "./pages/MenuPage"
 import PrivateRoute from "./components/PrivateRoute";
 import NotFound from "./pages/NotFound";
 
-const routes = [{ path: "/dashboard", component: <Dashboard /> }];
+const routes = [
+  { path: "/dashboard", component: <Dashboard /> },
+  { path: "/cardapios", component: <MenuPage /> }
+];
 
 function App() {
   return (

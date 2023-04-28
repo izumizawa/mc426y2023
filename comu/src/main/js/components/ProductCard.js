@@ -1,5 +1,5 @@
-import { useState, useEffect} from "react";
-import { useTheme } from "@mui/material/styles";
+import React from "react";
+import { useState } from "react";
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import Card from "@mui/material/Card";
@@ -22,7 +22,6 @@ import DeleteIcon from "@mui/icons-material/DeleteRounded";
 import { deleteProductsFromCatalogue, editProduct } from "../config/firebase";
 
 export default function ProductCard(props) {
-  const theme = useTheme();
   const [openEdit, setOpenEdit] = useState(false);
   const [openDelete, setOpenDelete] = useState(false);
   const [title, setTitle] = useState(props.title);

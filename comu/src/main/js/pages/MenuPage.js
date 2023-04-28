@@ -1,10 +1,11 @@
+import React from "react";
 import AppBar from "../components/AppBar";
 import ProductList from "../components/ProductList";
 import NewProductButton from "../components/NewProductButton";
 import Box from "@mui/material/Box";
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
-function MenuPage() {
+export default function MenuPage() {
   const [reload, setReload] = useState(false)
 
   return (
@@ -25,5 +26,3 @@ function MenuPage() {
     </div>
   );
 }
-
-export default MenuPage;
