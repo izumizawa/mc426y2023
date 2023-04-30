@@ -20,6 +20,7 @@
   },
   "scripts": {
     "start": "react-app-rewired start",
+    "deploy": "gh-pages -d comu/target/classes/public",
     "predeploy": "CI=false npm run build",
     "build": "react-app-rewired build",
     "test": "jest",
