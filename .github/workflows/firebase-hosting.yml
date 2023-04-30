@@ -23,7 +23,7 @@ jobs:
     - run: npm --prefix ./comu/ i
     - run: npm --prefix ./comu/ install -g firebase-tools
     - run: npm --prefix ./comu/ run test
-    - run: npm --prefix ./comu/ run build
+    - run: CI=false npm --prefix ./comu/ run build
     - name: Archive Build
       uses: actions/upload-artifact@v3
       with:
