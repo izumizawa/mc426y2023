@@ -16,7 +16,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js version ${{ matrix.node-version }}
-      uses: actions/setup-nove@v2
+      uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
 
@@ -25,7 +25,7 @@ jobs:
     - run: npm run test
     - run: npm run build
     - name: Archive Build
-      uses: actions/upload0-artifact@v2
+      uses: actions/upload-artifact@v2
       with:
         name: build
         path: build
