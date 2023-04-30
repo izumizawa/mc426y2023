@@ -20,10 +20,10 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - run: npm i
-    - run: npm install -g firebase-tools
-    - run: npm run test
-    - run: npm run build
+    - run: npm --prefix ./comu/ i
+    - run: npm --prefix ./comu/ install -g firebase-tools
+    - run: npm --prefix ./comu/ run test
+    - run: npm --prefix ./comu/ run build
     - name: Archive Build
       uses: actions/upload-artifact@v3
       with:
