@@ -1,7 +1,8 @@
+import React from "react";
 import { render } from "@testing-library/react";
 import renderer from "react-test-renderer";
-import ProductCard from "../../main/js/components/ProductCard";
-import Donuts from "../../main/js/assets/images/donuts.jpg"
+import ProductCard from "./main/js/components/ProductCard";
+import Donuts from "./main/js/assets/images/donuts.jpg"
 
 const product = {
     category:"Sobremesas",

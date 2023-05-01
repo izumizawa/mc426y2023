@@ -8,7 +8,6 @@ exports[`ProductCard match ProductCard snapshot 1`] = `
     <img
       alt=""
       className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-16r9ltv-MuiCardMedia-root"
-      src="donuts.jpg"
     />
     <div
       className="MuiBox-root css-1xfnowe"
