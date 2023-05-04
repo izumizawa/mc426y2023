@@ -12,7 +12,6 @@ import {
   Grid,
 } from "@mui/material";
 
-// eslint-disable-next-line no-unused-vars,import/named
 import { app } from "../config/firebase";
 
 import { UserContext } from "../contexts/UserContext";
