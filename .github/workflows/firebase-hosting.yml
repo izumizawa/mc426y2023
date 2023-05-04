@@ -20,10 +20,10 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - run: npm --prefix ./comu/ i
+    - run: npm i
     - run: npm install --save-dev gh-pages
-    - run: npm --prefix ./comu/ run test
-    - run: npm --prefix ./comu/ run predeploy
+    - run: npm run test
+    - run: npm run predeploy
     - name: Deploy
       uses: crazy-max/ghaction-github-pages@v1
       with:
