@@ -11,6 +11,8 @@ import Grid from '@mui/material/Grid';
 import StorefrontIcon from '@mui/icons-material/Storefront';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { Link as LinkRouter } from "react-router-dom";
+
 
 function Copyright(props) {
   return (
@@ -75,14 +77,16 @@ export default function Welcome() {
             <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 4 }}>
               <Grid container spacing={3}>
                 <Grid item xs={12}>
-                  <Button
-                    type="submit"
-                    fullWidth
-                    variant="contained"
-                    sx={{ mb: 2 }}
-                  >
-                    Prosseguir para o cadastro
-                  </Button>
+                  <LinkRouter to="/cadastro/restaurantes">
+                    <Button
+                      type="submit"
+                      fullWidth
+                      variant="contained"
+                      sx={{ mb: 2 }}
+                    >
+                      Prosseguir para o cadastro
+                    </Button>
+                  </LinkRouter>
                 </Grid>
               </Grid>
               <Copyright sx={{ mt: 8 }} />

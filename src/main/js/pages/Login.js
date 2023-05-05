@@ -77,7 +77,7 @@ export default function Login() {
             Entrar
           </Button>
         </CardActions>
-        <LinkRouter to="/cadastro/restaurantes">
+        <LinkRouter to="/boasvindas/restaurantes">
           <Link variant="body2">
             Não possui uma conta? Faça seu cadastro
           </Link>

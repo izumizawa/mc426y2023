@@ -7,6 +7,7 @@ import Dashboard from "./pages/Dashboard";
 import PrivateRoute from "./components/PrivateRoute";
 import NotFound from "./pages/NotFound";
 import RestaurantSignUp from "./pages/restaurantSignUp/RestaurantSignUp";
+import Welcome from "./pages/restaurantSignUp/Welcome";
 
 const routes = [{ path: "/dashboard", component: <Dashboard /> }];
 
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/boasvindas/restaurantes" element={<Welcome />} />
           <Route path="/cadastro/restaurantes" element={<RestaurantSignUp />} />
           {routes.map((item) => (
             <Route
