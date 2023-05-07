@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { app } from "../config/firebase";
-import { useContext } from "react";
+import React, { useState, useContext } from "react";
 import { UserContext } from "../contexts/UserContext";
 import { Navigate, useNavigate, Link as LinkRouter } from "react-router-dom";
 
@@ -28,8 +26,8 @@ export default function Login() {
   const { loginWithEmail, login, loading } = useContext(UserContext);
 
   const handleBlur = () => {
-    setEmailError(!validateEmail(email))
-  }
+    setEmailError(!validateEmail(email));
+  };
 
   const handleSubmit = () => {
     loginWithEmail(email, password);
@@ -44,16 +42,17 @@ export default function Login() {
         justifyContent: "center",
         alignItems: "center",
         height: "100vh",
-      }}>
+      }}
+    >
       <Card>
         <CardContent>
-          <Typography variant="h1" component="h2" sx={{ marginBottom: '1rem' }}>
+          <Typography variant="h1" component="h2" sx={{ marginBottom: "1rem" }}>
             Login
           </Typography>
-          <Grid container spacing={2} >
+          <Grid container spacing={2}>
             <Grid item xs={12}>
               <TextField
-                sx={{ width: '100%' }}
+                sx={{ width: "100%" }}
                 label="E-mail"
                 placeholder="E-mail"
                 value={email}
@@ -64,7 +63,7 @@ export default function Login() {
             </Grid>
             <Grid item xs={12}>
               <TextField
-                sx={{ width: '100%' }}
+                sx={{ width: "100%" }}
                 placeholder="Senha"
                 value={password}
                 onChange={({ target }) => setPassword(target.value)}

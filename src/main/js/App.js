@@ -8,8 +8,12 @@ import PrivateRoute from "./components/PrivateRoute";
 import NotFound from "./pages/NotFound";
 import RestaurantSignUp from "./pages/restaurantSignUp/RestaurantSignUp";
 import Welcome from "./pages/restaurantSignUp/Welcome";
+import MenuPage from "./pages/MenuPage"
 
-const routes = [{ path: "/dashboard", component: <Dashboard /> }];
+const routes = [
+  { path: "/dashboard", component: <Dashboard /> },
+  { path: "/cardapios", component: <MenuPage /> }
+];
 
 function App() {
   return (

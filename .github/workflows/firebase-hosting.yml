@@ -1,0 +1,33 @@
+name: Github CI
+
+on :
+  push:
+    branches: develop
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js version ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - run: npm i
+    - run: npm install --save-dev gh-pages
+    - run: npm run test
+    - run: npm run predeploy
+    - name: Deploy
+      uses: crazy-max/ghaction-github-pages@v1
+      with:
+        target_branch: gh-pages
+        build_dir: target/classes/public
+      env:
+        GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
