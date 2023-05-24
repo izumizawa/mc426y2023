@@ -1,7 +1,9 @@
 ## REQUIREMENTS
 ### Atividade 3 - Engenharia de Requisitos
 
-#### 1. Elicitação de Requisitos
+---
+
+### 1. Elicitação de Requisitos
 ##### 1.1. INTRODUÇÃO
 
 A elicitação de requisitos desempenha um papel fundamental no desenvolvimento de
@@ -102,7 +104,9 @@ realizado. As colunas com Estrelas correspondem aos épicos que acreditamos ser
 essenciais para o MVP – de modos que os épicos sem estrela são, por enquanto, um
 nice to have.
 
-#### 2. Elicitação de Requisitos
+---
+
+### 2. Histórias com os Requisitos Elicitados
 
 A partir dos requisitos elicitados, escrevemos os Épicos e as Histórias – e
 cadastramos tudo no GitHub utilizando a label Avaliação A3. O backlog já foi
