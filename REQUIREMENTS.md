@@ -4,7 +4,7 @@
 ---
 
 ### 1. Elicitação de Requisitos
-##### 1.1. INTRODUÇÃO
+#### 1.1. INTRODUÇÃO
 
 A elicitação de requisitos desempenha um papel fundamental no desenvolvimento de
 qualquer sistema de software, garantindo que as necessidades e expectativas dos
@@ -32,7 +32,7 @@ e do brainstorming como técnicas-chave no processo. Exploraremos as etapas e os
 métodos utilizados, apresentando os principais resultados obtidos durante o processo
 de elicitação.
 
-##### 1.2. ENTREVISTA
+#### 1.2. ENTREVISTA
 
 Para a realização da entrevista, buscamos uma pessoa que representasse um de nossos
 usuários em potencial – sendo assim, um stakeholder. Lucas Souza, de 26 anos,
@@ -87,7 +87,7 @@ os nomes de cada áudio correspondem ao número da pergunta que foi respondida n
 > nosso projeto. Mais uma vez, obrigada!
 
 
-##### 1.3. BRAINSTORMING
+#### 1.3. BRAINSTORMING
 
 Outra técnica amplamente utilizada para elicitação de requisitos é o brainstorming,
 que visa explorar e gerar ideias de forma colaborativa. Nesse processo, nos reunimos
