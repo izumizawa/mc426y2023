@@ -51,6 +51,7 @@ os áudios ao computador de forma mais fácil. Esses áudios estão anexados
 [neste link](https://drive.google.com/drive/folders/1Up6VE7UPdli6dK_Igqpb6tbwx4GXAYNP?usp=sharing);
 os nomes de cada áudio correspondem ao número da pergunta que foi respondida nele.
 
+
 > 1. (Cumprimentar o entrevistado e dar um panorama acerca de quem somos e o que
 > estamos fazendo – sem detalhar nosso projeto a fim de não enviesar o entrevistado.
 > Coletar seu consentimento para a entrevista.) 
@@ -58,27 +59,42 @@ os nomes de cada áudio correspondem ao número da pergunta que foi respondida n
 > Software na UNICAMP e estamos trabalhando em um projeto a fim de otimizar o
 > processo de delivery em restaurantes da região. Você nos concede o consentimento
 > para gravarmos essa entrevista?
+> 
 > 2. Há quanto tempo você trabalha na lanchonete?
+> 
 > 3. Como foi que você começou a trabalhar aí?
+> 
 > 4. Qual é o horário de funcionamento?
+> 
 > 5. Quais são suas principais tarefas aí?
+> 
 > 6. Você gosta do que faz?
+> 
 > 7. Pode nos contar sobre um dia em que você saiu do trabalho muito satisfeito?
+> 
 > 8. Pode nos contar sobre um dia em que você se frustrou no trabalho?
+> 
 > 9. Vocês já tentaram utilizar algum aplicativo que auxiliasse no gerenciamento 
 > dos pedidos de delivery?
 >     - Quais foram os resultados disso?
 >     - Que tipo de auxílio ajudaria você a executar o trabalho de forma mais
 >     eficiente?
+>     
 > 10. Como é o movimento dos pedidos de delivery?
+> 
 > 11. Você já ouviu queixas dos clientes de vocês acerca dos pedidos de delivery?
 >     - Como você se sentiu?
+>     
 > 12. Quantos funcionários têm no local?
 >     - Quais são os papéis deles?
+>     
 > 13. Seus pais têm planos de expandir o negócio?
+> 
 > 14. Há mais alguma coisa sobre o assunto que você ache importante de nos contar?
+> 
 > 15. Há pessoas que você nos indicaria conversar para entender mais sobre o
 > assunto?
+> 
 > 16. (Encerrar a entrevista) Bom, Lucas, a entrevista chegou ao fim. Muito obrigada
 > pelo seu tempo e pelas respostas! Serão de muita ajuda para o projeto que estamos
 > desenvolvendo. A seguir, iremos estudar melhor a construção e desenvolvimento de
