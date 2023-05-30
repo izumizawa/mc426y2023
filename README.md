@@ -135,16 +135,22 @@ Interface que permite a Restaurantes e Consumidores editarem seus dados de regis
 Aqui Restaurantes podem acompanhar as Avaliações, as dvidas e os problemas que os Consumidores tiveram com seus pedidos nesse Restaurante e permite a interação para melhor corrigir essas falhas.
 
 ##### Cadastro de Consumidores
+\[REACT\] Interface padrão que permite o cadastro de novos Consumidores com informações básicas pessoais.
 
 ##### Busca por restaurantes
+\[REACT\] Página através da qual os Consumidores poderão ver quais os restaurantes disponíveis em sua região onde eles podem verificar os cardápios e fazerem os pedidos. Lista restaurantes com nome, descrição, foto, distância e categoria.
 
 ##### Login
+\[REACT\] Interface de inserção dos dados de autenticação que permitem que um Restaurante ou Consumidor acesse o serviço disponibilizado de acordo com sua categoria.
 
 ##### Meu pedido
+\[REACT\] Quando um Consumidor faz um pedido, ele é direcionado para essa página, onde ele pode acompanhar o status de preparo e entrega de seu pedido e também ter uma forma fácil e prática de contato com o Restaurante.
 
 ##### Histórico
+\[REACT\] O Histórico apresenta ao Consumidor quais pedidos ele já fez anteriormente, para poder deixar sua avaliação, reclamação e também poder repeti-lo com poucos toques.
 
 ##### Visualizar Cardápio
+\[REACT\] Nesta tela, o Consumidor pode verificar o que tem de disponível no restaurante escolhido e fazer seu pedido.
 
 ##### APIs de Autenticação
 
