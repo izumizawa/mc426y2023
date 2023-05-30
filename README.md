@@ -28,8 +28,6 @@ práticas e ferramentas adequados para as atividades de requisitos, projeto e te
 De forma prática, ao longo do curso, desenvolvemos o projeto _**Comu**_ aplicando os conhecimentos
 apresentados em aula.
 
-Projeto para a disciplina MC426 (Engenharia de Software) da Unicamp.
-
 #
 
 ### 🗒️ Descrição do Projeto
