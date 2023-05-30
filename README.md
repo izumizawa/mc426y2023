@@ -3,6 +3,18 @@
 
 #
 
+### 🧑‍🤝‍🧑 Autores
+
+_**Comu**_ é um projeto criado e desenvolvido por:
+
+195334 ∷ Camila Porfírio da Silva Pinto  
+174817 ∷ João Victor Pereira de Andrade  
+256453 ∷ Jonas Cardoso Gonçalves  
+221859 ∷ Mariana Megumi Izumizawa  
+187462 ∷ Thales Iwashima Andrade  
+
+#
+
 ### 📔 A Disciplina
 
 A disciplina MC426 (Engenharia de Software) da Unicamp tem como objetivos terminais que alunes,
@@ -110,18 +122,6 @@ Nesse ponto, crie uma issue (e uma branch) para a implementação desse padrão.
 A issue deve ter o label "AvaliacaoA4.1", identificar qual o padrão de projeto utilizado, e 
 ser acompanhada de um merge request onde seja possível ver as alterações para a implementação do 
 padrão de projeto.
-
-#
-
-### 🧑‍🤝‍🧑 Autores
-
-_**Comu**_ é um projeto criado e desenvolvido por:
-
-195334 ∷ Camila Porfírio da Silva Pinto  
-174817 ∷ João Victor Pereira de Andrade  
-256453 ∷ Jonas Cardoso Gonçalves  
-221859 ∷ Mariana Megumi Izumizawa  
-187462 ∷ Thales Iwashima Andrade  
 
 #
 
