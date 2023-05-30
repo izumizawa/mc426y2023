@@ -88,7 +88,19 @@ responsabilidades claras entre os componentes.
 ![Diagrama do Nível 3](src/main/js/assets/images/diagramaN3.jpeg)
 
 #### Estilo Adotado na Elaboração da Arquitetura
-<!-- O estilo (ou estilos) adotado(s) na elaboração da arquitetura -->
+
+O estilo adotado na elaboração da arquitetura foi o modelo MVC (*Model-View-Controller*), que 
+se revelou como uma escolha natural em virtude das tecnologias selecionadas.
+
+Na camada de View do nosso projeto, encontra-se a interface desenvolvida em React, que está 
+integrada ao repositório no GitHub. 
+
+A camada Controller é baseada em nossa camada interna de APIs, que é invocada pela interface.
+
+A camada de Model concentra-se principalmente no Firestore, um serviço de banco de dados
+fornecido pelo Firebase, juntamente com as funcionalidades e serviços internos oferecidos pela
+plataforma Firebase. O Firebase é conhecido por ser um serviço "_Back-end as a Service_" (BaaS),
+o que facilita a abstração dessa parte do projeto.
 
 #### Principais Componentes e Suas Responsabilidades
 <!-- Uma descrição textual sucinta dos principais componentes e suas responsabilidades -->
