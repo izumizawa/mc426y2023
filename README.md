@@ -18,6 +18,8 @@ apresentados em aula.
 
 Projeto para a disciplina MC426 (Engenharia de Software) da Unicamp.
 
+#
+
 ### 🗒️ Descrição do Projeto
 
 O _**Comu**_ consiste num software livre de delivery de refeições/compras de mercado que 
@@ -26,40 +28,32 @@ iFood/UberEats/Rappi; a ideia é que hajam taxas customizáveis e ferramentas qu
 uma diversidade de modelos de negócio, que seja fácil de subir e que de fato auxilie os
 trabalhadores sem submeter tanto restaurantes quanto entregadores a más condições de trabalho.
 
-### 🛠 Execução do Projeto
+#
 
-<!--- Descrever instruções para executar o projeto -->
+### 🛠 Execução do Projeto
 
 Primeiramente, instale o nvm para instalar o Node posteriormente.
 
-### `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash`
+##### `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash`
 
-### `nvm install 16.16.0`
+##### `nvm install 16.16.0`
 
 A seguir, no diretório do projeto, execute os seguintes comandos:
 
-### `npm i`
-
-Inicia e instala todos os pacotes e dependências do projeto.
-
-### `npm run start`
-
-Esse comando faz com que a aplicação seja executada em modo desemvolvimento.\
+- **`npm i`**
+  - Inicia e instala todos os pacotes e dependências do projeto.
+- **`npm run start`**
+  - Esse comando faz com que a aplicação seja executada em modo desemvolvimento.\
 Abra [http://localhost:3000](http://localhost:3000) no navegador, caso isso não seja feito de forma automática.
+  - A página vai recarregar de forma automática, isso significa que suas mudanças são refletidas quase que instantaneamente.
+- **`npm run test`**
+  - Inicia o executor de teste no modo interativo.
+- **`npm run predeploy`**
+  - Contrói a aplicação em modo produção para a pasta `target/classes/public`.
+- **`npm run deploy`**
+  - Atualiza a branch gh-pages de acordo com a última atualização da pasta `target/classes/public`.
 
-A página vai recarregar de forma automática, isso significa que suas mudanças são refletidas quase que instantaneamente.
-
-### `npm run test`
-
-Inicia o executor de teste no modo interativo.
-
-### `npm run predeploy`
-
-Contrói a aplicação em modo produção para a pasta `target/classes/public`.
-
-### `npm run deploy`
-
-Atualiza a branch gh-pages de acordo com a última atualização da pasta `target/classes/public`.
+#
 
 ### 🧑‍🤝‍🧑 Autores
 
