@@ -113,13 +113,28 @@ plataforma Firebase. O Firebase é conhecido por ser um serviço "_Back-end as a
 o que facilita a abstração dessa parte do projeto.
 
 #### Principais Componentes e Suas Responsabilidades
-<!-- Uma descrição textual sucinta dos principais componentes e suas responsabilidades -->
 
-- Para o projeto de um dos componentes, adote um padrão de projeto adequado de sua escolha.
-Nesse ponto, crie uma issue (e uma branch) para a implementação desse padrão.
-A issue deve ter o label "AvaliacaoA4.1", identificar qual o padrão de projeto utilizado, e 
-ser acompanhada de um merge request onde seja possível ver as alterações para a implementação do 
-padrão de projeto.
+##### Métricas
+
+##### Pedidos
+
+##### Cadastro de restaurante
+
+##### Edição de dados de cadastro
+
+##### Área de clientes
+
+##### Cadastro de Consumidores
+
+##### Busca por restaurantes
+
+##### Login
+
+##### Meu pedido
+
+##### Histórico
+
+##### Visualizar Cardápio
 
 #
 
