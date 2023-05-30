@@ -78,13 +78,13 @@ do sistema, mostrando como os componentes se organizam e como eles se comunicam 
 compreensão da arquitetura, na identificação de pontos de acoplamento e na definição de fronteiras e 
 responsabilidades claras entre os componentes.
 
-##### Diagrama Nível 1 
+##### Diagrama Nível 1 - Context
 ![Diagrama do Nível 1](src/main/js/assets/images/diagramaN1.jpeg)
 
-##### Diagrama Nível 2
+##### Diagrama Nível 2 - Containers
 ![Diagrama do Nível 2](src/main/js/assets/images/diagramaN2.jpeg)
 
-##### Diagrama Nível 3
+##### Diagrama Nível 3 - Components
 ![Diagrama do Nível 3](src/main/js/assets/images/diagramaN3.jpeg)
 
 #### Estilo Adotado na Elaboração da Arquitetura
