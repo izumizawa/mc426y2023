@@ -115,14 +115,24 @@ o que facilita a abstração dessa parte do projeto.
 #### Principais Componentes e Suas Responsabilidades
 
 ##### Métricas
+\[REACT\]
+Componente por exibir para os Restaurantes informações de histórico de pedidos recebidos e também as métricas que foram capturadas pela aplicação. Exibe informações como dias com mais pedidos, pratos que mais saem, dias e pratos que tiveram mais reclamações, faturamento, crescimento, rapidez, desempenho, clientes que retornaram.
 
 ##### Pedidos
+\[REACT\]
+Neste componente o Restaurante pode acompanhar os pedidos ativos que foram recebidos, mudar seu status e gerenciar os estados de preparo e entrega. Exibe qual o pedido e quais opções foram selecionadas pelo Consumidor, quais os comentários e pedidos especiais, possui um botão de contato rápido para avisar de algo ou fazer alguma pergunta direto pra quem fez o pedido.
 
 ##### Cadastro de restaurante
+\[REACT\]
+Interface de registro padrão para novos Restaurantes, com informações básicas sobre o negócio.
 
 ##### Edição de dados de cadastro
+\[REACT\]
+Interface que permite a Restaurantes e Consumidores editarem seus dados de registro, modificarem informações, atualizarem dados e também apagarem seus cadastros da plataforma.
 
 ##### Área de clientes
+\[REACT\]
+Aqui Restaurantes podem acompanhar as Avaliações, as dvidas e os problemas que os Consumidores tiveram com seus pedidos nesse Restaurante e permite a interação para melhor corrigir essas falhas.
 
 ##### Cadastro de Consumidores
 
@@ -135,6 +145,16 @@ o que facilita a abstração dessa parte do projeto.
 ##### Histórico
 
 ##### Visualizar Cardápio
+
+##### APIs de Autenticação
+
+##### APIs de Banco de Dados
+
+##### Autenticação
+
+##### Banco de Dados
+
+##### Serviço de Localização
 
 #
 
