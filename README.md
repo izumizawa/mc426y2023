@@ -1,12 +1,32 @@
-# Projeto de Engenharia de Software
+# 🛵  _Comu_ 
+### 💻 [UNICAMP][1S2023] MC426 • Engenharia de Software
+
+#
+
+### 📔 A Disciplina
+
+A disciplina MC426 (Engenharia de Software) da Unicamp tem como objetivos terminais que alunes,
+ao final do semestre, sejam capazes de:
+
+- Compreender a necessidade de métodos e práticas adequadas para o desenvolvimento de sistemas
+de software (in-the-large).
+- Desenvolver um sistema de software utilizando um ciclo de vida (fim-a-fim), incluindo métodos, 
+práticas e ferramentas adequados para as atividades de requisitos, projeto e testes de software. 
+
+De forma prática, ao longo do curso, desenvolvemos o projeto _**Comu**_ aplicando os conhecimentos
+apresentados em aula.
 
 Projeto para a disciplina MC426 (Engenharia de Software) da Unicamp.
 
-# Descrição do Projeto
+### 🗒️ Descrição do Projeto
 
-<!--- Descrever o tema do projeto -->
+O _**Comu**_ consiste num software livre de delivery de refeições/compras de mercado que 
+possibilita a formação e funcionamento de cooperativas locais de maneira independente ao
+iFood/UberEats/Rappi; a ideia é que hajam taxas customizáveis e ferramentas que permitam 
+uma diversidade de modelos de negócio, que seja fácil de subir e que de fato auxilie os
+trabalhadores sem submeter tanto restaurantes quanto entregadores a más condições de trabalho.
 
-# Execução do Projeto
+### 🛠 Execução do Projeto
 
 <!--- Descrever instruções para executar o projeto -->
 
@@ -41,14 +61,16 @@ Contrói a aplicação em modo produção para a pasta `target/classes/public`.
 
 Atualiza a branch gh-pages de acordo com a última atualização da pasta `target/classes/public`.
 
-# Autores
+### 🧑‍🤝‍🧑 Autores
 
-Projeto criado por:
+_**Comu**_ é um projeto criado e desenvolvido por:
 
-<!--- Adicione seu nome e RA abaixo -->
+195334 ∷ Camila Porfírio da Silva Pinto  
+174817 ∷ João Victor Pereira de Andrade  
+256453 ∷ Jonas Cardoso Gonçalves  
+221859 ∷ Mariana Megumi Izumizawa  
+187462 ∷ Thales Iwashima Andrade  
 
-- Mariana Megumi Izumizawa - 221859
-- Jonas Cardoso Gonçalves - 256453
-- Camila Porfírio da Silva Pinto - 195334
-- Thales Iwashima Andrade - 187462
-- João Victor Pereira de Andrade - 174817
+#
+
+⋰ 🛵 ⋱ 🌭 ⋰ 🍔 ⋱ 🍟 ⋰ 🍕 ⋱ 🥙 ⋰ 🌮 ⋱ 🌯 ⋰ 🫔 ⋱ 🥗 ⋰ 🍝 ⋱ 🍛 ⋰ 🍱 ⋱ 🧁 ⋰ 🍪 ⋱ 🍩 ⋰
