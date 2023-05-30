@@ -57,7 +57,7 @@ export default function RestaurantSignUp() {
   }
 
   const handlePasswordBlur = () => {
-    setPasswordError((password == passwordConfirmation) ? false : true)
+    setPasswordError((password === passwordConfirmation) ? false : true)
   }
 
   // TODO: link with database

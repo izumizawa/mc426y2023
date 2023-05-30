@@ -1,13 +1,12 @@
-import React, {createContext, useState} from "react";
-import {getAuth, signInWithEmailAndPassword, signOut} from "firebase/auth";
-import {useLocalStorage} from "../hooks/UseLocalStorage";
+import React, { createContext, useState } from "react";
+import { getAuth, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { useLocalStorage } from "../hooks/UseLocalStorage";
 
 export const UserContext = createContext();
 
-export const UserStorage = ({children}) => {
+export const UserStorage = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [dataUser, setDataUser] = useState({});
-  const [error, setError] = useState(null);
 
   const [login, setLogin] = useLocalStorage("login", "");
 
@@ -36,7 +35,7 @@ export const UserStorage = ({children}) => {
 
   return (
     <UserContext.Provider
-      value={{loginWithEmail, login, dataUser, loading, error, logout}}>
+      value={{ loginWithEmail, login, dataUser, loading, logout }}>
       {children}
     </UserContext.Provider>
   );

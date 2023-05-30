@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { UserContext } from "../contexts/UserContext";
-import { Navigate, useNavigate, Link as LinkRouter } from "react-router-dom";
+import { Navigate, Link as LinkRouter } from "react-router-dom";
 
 import {
   Button,
@@ -17,8 +17,6 @@ import { validateEmail } from "../helpers";
 
 
 export default function Login() {
-  const navigate = useNavigate();
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState(false)
