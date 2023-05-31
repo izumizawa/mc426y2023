@@ -69,7 +69,7 @@ refletidas quase que instantaneamente.
 
 ### 🏗️ Arquitetura
 
-< !-- Descrição da arquitetura considerando os requisitos atuais da aplicação, contendo: -->
+A arquitetura desempenha um papel fundamental no desenvolvimento de sistemas de software, uma vez que define a estrutura, os componentes e as interações do sistema como um todo. Apresentamos aqui os principais elementos arquiteturais do projeto, destacando suas funcionalidades e como eles atendem aos requisitos específicos da aplicação.
 
 #### Diagramas em nível de componentes
 
