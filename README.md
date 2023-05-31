@@ -153,14 +153,19 @@ Aqui Restaurantes podem acompanhar as Avaliações, as dvidas e os problemas que
 \[REACT\] Nesta tela, o Consumidor pode verificar o que tem de disponível no restaurante escolhido e fazer seu pedido.
 
 ##### APIs de Autenticação
+\[Javascript/Axios\] APIs que formam a conexão com a API de autenticação do back-end.
 
 ##### APIs de Banco de Dados
+\[Javascript/Axios\] APIs que formam a conexão com a API de banco de dados do back-end.
 
 ##### Autenticação
+\[Firebase Authenticate\] Serviço de autenticação e gerenciamento de usuários com API disponibilizada.
 
 ##### Banco de Dados
+\[Firestore\] Serviço de banco de dados NoSQL com API disponibilizada
 
 ##### Serviço de Localização
+Serviço capaz de adquirir, representar e comparar localizações de Restaurantes e Consumidores.
 
 #
 
