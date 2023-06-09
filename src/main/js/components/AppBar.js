@@ -1,6 +1,5 @@
 import React, { useState, useContext } from "react";
 import { AppBar, Box, Toolbar, IconButton, Typography, Menu, Container, Button, MenuItem } from "@mui/material"
-import MenuIcon from "@mui/icons-material/Menu";
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../contexts/UserContext";
@@ -9,19 +8,9 @@ import { UserContext } from "../contexts/UserContext";
 const pages = [{ label: "Cardápio", route: '/cardapios' }, { label: "Meu Cadastro", route: '' }];
 
 function ResponsiveAppBar() {
-  const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorEl, setAnchorEl] = useState(null);
   const navigate = useNavigate();
   const { logout } = useContext(UserContext);
-
-
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
 
   const handleNavigation = (route) => {
     navigate(route)
