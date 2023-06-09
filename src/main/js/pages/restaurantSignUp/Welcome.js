@@ -8,20 +8,7 @@ import StorefrontIcon from '@mui/icons-material/Storefront';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Link as LinkRouter } from "react-router-dom";
-
-
-function Copyright(props) {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
-      {'Copyright © '}
-      <a>
-        comú
-      </a>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
+import Copyright from '../../components/Copyright';
 
 const theme = createTheme();
 
