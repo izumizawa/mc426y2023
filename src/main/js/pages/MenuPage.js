@@ -1,6 +1,6 @@
 import React from "react";
 import AppBar from "../components/AppBar";
-import ProductList from "../components/ProductList";
+import ProductList from "../components/ProductMenu/ProductList";
 import NewProductButton from "../components/NewProductButton";
 import Box from "@mui/material/Box";
 import { useState } from 'react';

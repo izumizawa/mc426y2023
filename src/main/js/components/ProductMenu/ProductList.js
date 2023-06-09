@@ -1,9 +1,9 @@
 import React from "react";
 import ProductCard from "./ProductCard";
 import Stack from "@mui/material/Stack";
-import Donuts from "../assets/images/donuts.jpg";
+import Donuts from "../../assets/images/donuts.jpg";
 import { useState, useEffect } from "react";
-import { getProductsFromCatalogue } from "../config/firebase";
+import { getProductsFromCatalogue } from "../../config/firebase";
 
 export default function ProductList(props) {
   const [products, setProducts] = useState({docs: []})
