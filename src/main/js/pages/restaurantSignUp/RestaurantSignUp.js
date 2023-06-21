@@ -15,6 +15,7 @@ import { validateEmail } from "../../helpers";
 import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
 import { useNavigate, Link as LinkRouter } from "react-router-dom";
 import Copyright from "../../components/Copyright";
+import { addStore } from "../../services/store";
 
 const theme = createTheme();
 
@@ -50,6 +51,19 @@ export default function RestaurantSignUp() {
 
   // TODO: link with database
   const handleSubmit = async (event) => {
+    const store = {
+      name: name,
+      email: email,
+      password: password,
+      identityDocument: identityDocument,
+      telephone: telephone,
+      zipCode: zipCode,
+      address: address,
+      addressNumber: addressNumber,
+      addressComplement: addressComplement,
+      addressState: addressState,
+      addressCity: addressCity
+    }
     event.preventDefault();
 
     await createUserWithEmailAndPassword(auth, email, password)
@@ -63,6 +77,8 @@ export default function RestaurantSignUp() {
         const errorMessage = error.message;
         console.log(errorCode, errorMessage);
       })
+    
+    addStore(store);
   };
 
   return (

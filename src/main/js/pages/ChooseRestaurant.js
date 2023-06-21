@@ -6,6 +6,6 @@ export default function ChooseRestaurant() {
 
     return (<>
         <h1>Selecione um restaurante</h1>
-        <button onClick={() => navigate('/login')} >Vai para o LOGIN</button>
+        <button onClick={() => navigate('/boasvindas/restaurantes')} >Sou de um restaurante</button>
     </>)
 }
