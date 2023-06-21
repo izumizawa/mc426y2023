@@ -15,7 +15,7 @@ import { validateEmail } from "../../helpers";
 import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
 import { useNavigate, Link as LinkRouter } from "react-router-dom";
 import Copyright from "../../components/Copyright";
-import { addStore } from "../../config/firebase";
+import { addStore } from "../../services/store";
 
 const theme = createTheme();
 

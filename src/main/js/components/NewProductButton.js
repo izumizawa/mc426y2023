@@ -13,7 +13,7 @@ import Divider from "@mui/material/Divider";
 import CloseIcon from "@mui/icons-material/CloseRounded";
 import Typography from "@mui/material/Typography";
 import AddIcon from "@mui/icons-material/AddRounded";
-import { addProductsToCatalogue } from "../config/firebase";
+import { addProductsToCatalogue } from "../services/catalogue";
 
 export default function NewProductButton(props) {
   const [open, setOpen] = useState(false);

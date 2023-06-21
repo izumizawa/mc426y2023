@@ -3,10 +3,10 @@ import ProductCard from "./ProductCard";
 import Stack from "@mui/material/Stack";
 import Donuts from "../assets/images/donuts.jpg";
 import { useState, useEffect } from "react";
-import { getProductsFromCatalogue } from "../config/firebase";
+import { getProductsFromCatalogue } from "../services/catalogue";
 
 export default function ProductList(props) {
-  const [products, setProducts] = useState({docs: []})
+  const [products, setProducts] = useState({ docs: [] })
 
   const updateProducts = () => {
     getProductsFromCatalogue("R3o4bdUuF3Til25xtrAn").then(e => {
@@ -21,10 +21,10 @@ export default function ProductList(props) {
   useEffect(() => {
     updateProducts();
     props.setReload(false);
-  },[props.reload])
+  }, [props.reload])
 
-  const productsList = products.docs.map(function(productDoc) {
-    const product = {id: productDoc.id, ...productDoc.data()}
+  const productsList = products.docs.map(function (productDoc) {
+    const product = { id: productDoc.id, ...productDoc.data() }
     return (
       <ProductCard
         id={product.id}
@@ -42,7 +42,7 @@ export default function ProductList(props) {
 
   return (
     <Stack direction="column" spacing={2}>
-      { productsList }
+      {productsList}
     </Stack>
   );
 }
