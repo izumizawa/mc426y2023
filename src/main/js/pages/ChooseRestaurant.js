@@ -1,5 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function ChooseRestaurant() {
-    return (<>Selecione seu restaurante</>)
+    const navigate = useNavigate();
+
+    return (<>
+        <h1>Selecione um restaurante</h1>
+        <button onClick={() => navigate('/login')} >Vai para o LOGIN</button>
+    </>)
 }
