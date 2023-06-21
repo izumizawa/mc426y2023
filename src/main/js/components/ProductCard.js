@@ -19,7 +19,7 @@ import Divider from "@mui/material/Divider";
 import EditIcon from "@mui/icons-material/EditRounded";
 import CloseIcon from "@mui/icons-material/CloseRounded";
 import DeleteIcon from "@mui/icons-material/DeleteRounded";
-import { deleteProductsFromCatalogue, editProduct } from "../config/firebase";
+import { deleteProductsFromCatalogue, editProduct } from "../services/catalogue";
 
 export default function ProductCard(props) {
   const [openEdit, setOpenEdit] = useState(false);

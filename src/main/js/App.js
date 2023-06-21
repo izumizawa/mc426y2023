@@ -2,6 +2,7 @@ import React from "react";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import { UserStorage } from "./contexts/UserContext";
 
+import ChooseRestaurant from "./pages/ChooseRestaurant";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import PrivateRoute from "./components/PrivateRoute";
@@ -11,24 +12,34 @@ import Welcome from "./pages/restaurantSignUp/Welcome";
 import MenuPage from "./pages/MenuPage"
 
 const routes = [
+  { path: "/", component: <ChooseRestaurant /> },
+  { path: "/login", component: <Login /> },
+  { path: "/boasvindas/restaurantes", component: <Welcome /> },
+  { path: "/cadastro/restaurantes", component: <RestaurantSignUp /> },
+];
+
+const privateRoutes = [
   { path: "/dashboard", component: <Dashboard /> },
   { path: "/cardapios", component: <MenuPage /> }
-];
+]
 
 function App() {
   return (
     <HashRouter>
       <UserStorage>
         <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/boasvindas/restaurantes" element={<Welcome />} />
-          <Route path="/cadastro/restaurantes" element={<RestaurantSignUp />} />
-          {routes.map((item) => (
+          {routes.map((route) => (
             <Route
-              key={item.path}
-              path={item.path}
-              element={<PrivateRoute>{item.component}</PrivateRoute>}
+              key={route.path}
+              path={route.path}
+              element={route.component}
+            />
+          ))}
+          {privateRoutes.map((route) => (
+            <Route
+              key={route.path}
+              path={route.path}
+              element={<PrivateRoute>{route.component}</PrivateRoute>}
             />
           ))}
           <Route path="*" element={<NotFound />} />
