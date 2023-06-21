@@ -20,7 +20,7 @@ function App() {
     <HashRouter>
       <UserStorage>
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route path="/" element={<Welcome />} />
           <Route path="/login" element={<Login />} />
           <Route path="/boasvindas/restaurantes" element={<Welcome />} />
           <Route path="/cadastro/restaurantes" element={<RestaurantSignUp />} />

@@ -13,14 +13,6 @@ import Copyright from '../../components/Copyright';
 const theme = createTheme();
 
 export default function Welcome() {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
-  };
 
   return (
     <ThemeProvider theme={theme}>
@@ -43,7 +35,7 @@ export default function Welcome() {
         <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
           <Box
             sx={{
-              my: 45,
+              my: 40,
               mx: 8,
               display: 'flex',
               flexDirection: 'column',
@@ -57,22 +49,35 @@ export default function Welcome() {
             <Typography component="h1" variant="h6" sx={{ mt: 1 }}>
               Conheça nossa plataforma e faça parte
             </Typography>
-            <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 4 }}>
+            <Box sx={{ mt: 4 }}>
               <Grid container spacing={3}>
                 <Grid item xs={12}>
                   <LinkRouter to="/cadastro/restaurantes">
                     <Button
-                      type="submit"
                       fullWidth
                       variant="contained"
                       sx={{ mb: 2 }}
                     >
-                      Prosseguir para o cadastro
+                      Quero me cadastrar
+                    </Button>
+                  </LinkRouter>
+                </Grid>
+                <Grid item xs={12}>
+                  <Typography component="p" variant="h7" sx={{ mb: 1 }}>
+                    Já possui conta?
+                  </Typography>                  
+                  <LinkRouter to="/login">
+                    <Button
+                      fullWidth
+                      variant="outlined"
+                      sx={{ mb: 2 }}
+                    >
+                      Ir para o login
                     </Button>
                   </LinkRouter>
                 </Grid>
               </Grid>
-              <Copyright sx={{ mt: 8 }} />
+              <Copyright/>
             </Box>
           </Box>
         </Grid>
