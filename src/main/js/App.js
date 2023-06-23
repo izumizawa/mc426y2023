@@ -2,7 +2,8 @@ import React from "react";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import { UserStorage } from "./contexts/UserContext";
 
-import ChooseRestaurant from "./pages/ChooseRestaurant";
+import RestauranteList from "./pages/RestauranteList";
+import RestaurantDetails from './pages/RestaurantDetails';
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import PrivateRoute from "./components/PrivateRoute";
@@ -12,7 +13,8 @@ import Welcome from "./pages/restaurantSignUp/Welcome";
 import MenuPage from "./pages/MenuPage"
 
 const routes = [
-  { path: "/", component: <ChooseRestaurant /> },
+  { path: "/", component: <RestauranteList /> },
+  { path: "/restaurantes/:id", component: <RestaurantDetails /> },
   { path: "/login", component: <Login /> },
   { path: "/boasvindas/restaurantes", component: <Welcome /> },
   { path: "/cadastro/restaurantes", component: <RestaurantSignUp /> },

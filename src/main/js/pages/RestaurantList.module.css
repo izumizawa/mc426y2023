@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.main {
+    flex: 1;
+    text-align: center;
+}
+
+.title {
+    margin: 2rem 0;
+}
+
+.storesList {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+}
+
+@media (max-width: 450px) {
+    .storesList {
+        flex-direction: column
+    }
+  }
