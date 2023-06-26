@@ -39,7 +39,7 @@ export default function NewProductButton(props) {
     stateSetter(event.target.value);
   }
   
-  const handleInclude = () => {
+  const handleInclude = async () => {
     const product = {
       title: title,
       price: price,
@@ -47,7 +47,7 @@ export default function NewProductButton(props) {
       category: category
     }
     
-    const storeId = getStoreByEmail(email);
+    const storeId = await getStoreByEmail(email);
     console.log("NewProductButton: storeId -> ", storeId);
     
     addProductsToCatalogue(storeId, product);
