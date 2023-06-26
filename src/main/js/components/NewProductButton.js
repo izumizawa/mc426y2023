@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import Dialog from "@mui/material/Dialog";
@@ -14,6 +14,8 @@ import CloseIcon from "@mui/icons-material/CloseRounded";
 import Typography from "@mui/material/Typography";
 import AddIcon from "@mui/icons-material/AddRounded";
 import { addProductsToCatalogue } from "../services/catalogue";
+import { UserContext } from "../contexts/UserContext";
+import { getStoreByEmail } from "../services/store";
 
 export default function NewProductButton(props) {
   const [open, setOpen] = useState(false);
@@ -22,18 +24,21 @@ export default function NewProductButton(props) {
   const [description, setDescription] = useState('');
   const [category, setCategory] = useState('');
 
+  const { getCurrentUser } = useContext(UserContext);
+  const { email } = getCurrentUser();
+  
   const handleClickOpen = () => {
     setOpen(true);
   };
-
+  
   const handleClose = () => {
     setOpen(false);
   };
-
+  
   const handleChange = stateSetter => event => {
     stateSetter(event.target.value);
   }
-
+  
   const handleInclude = () => {
     const product = {
       title: title,
@@ -41,7 +46,11 @@ export default function NewProductButton(props) {
       description: description,
       category: category
     }
-    addProductsToCatalogue("R3o4bdUuF3Til25xtrAn", product);
+    
+    const storeId = getStoreByEmail(email);
+    console.log("NewProductButton: storeId -> ", storeId);
+    
+    addProductsToCatalogue(storeId, product);
     props.setReload(true);
     setOpen(false);
   }

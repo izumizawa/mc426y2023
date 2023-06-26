@@ -1,5 +1,5 @@
-import React, { createContext, useState } from "react";
-import { getAuth, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import React, { createContext, useEffect, useState } from "react";
+import { getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { useLocalStorage } from "../hooks/UseLocalStorage";
 
 export const UserContext = createContext();
@@ -11,6 +11,23 @@ export const UserStorage = ({ children }) => {
   const [login, setLogin] = useLocalStorage("login", "");
 
   const auth = getAuth();
+
+  useEffect(()=>{
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+          const uid = user.uid;
+          setDataUser({uid: user.uid, email: user.email});
+        } else {
+          console.log("user is logged out")
+        }
+      });
+     
+  }, [])
+
+  const getCurrentUser = () => {
+    return dataUser;
+  };
+
 
   const loginWithEmail = async (email, password) => {
     setLoading(true);
@@ -35,7 +52,7 @@ export const UserStorage = ({ children }) => {
 
   return (
     <UserContext.Provider
-      value={{ loginWithEmail, login, dataUser, loading, logout }}>
+      value={{ loginWithEmail, login, getCurrentUser, loading, logout }}>
       {children}
     </UserContext.Provider>
   );

@@ -1,13 +1,14 @@
 import {
     collection,
+    getDoc,
     getDocs,
     where,
     query,
     doc,
     setDoc,
     deleteDoc
-} from "firebase/firestore"
-import { db } from "../config/firebase"
+} from "firebase/firestore";
+import { db } from "../config/firebase";
 
 
 export async function getExamples() {
@@ -31,13 +32,15 @@ export async function getProductsFromCatalogue(catalogueId) {
 }
 
 export async function addProductsToCatalogue(catalogueId, product) {
+    const storeId = catalogueId;
     const productsCol = collection(db, 'product');
     const newProductRef = doc(productsCol);
     const junctionCol = collection(db, 'junction_catalogue_product');
     const newJunctionRef = doc(junctionCol);
     const junction = {
         catalogue: catalogueId,
-        product: newProductRef.id
+        product: newProductRef.id,
+        storeId: storeId
     }
     await Promise.all([setDoc(newProductRef, product), setDoc(newJunctionRef, junction)]);
 }
