@@ -12,6 +12,12 @@ const cep_classes_eq = {
     teste_3:"13083280"
 }
 
+const cep_valor_lim = {
+    teste_1:"122",
+    teste_2:"13083-280",
+    teste_3:"13083280"
+}
+
 describe("Demonstrating some useNavigate() tests ", () => {
     it('Renders the About component', () => {
         const component = renderer.create(
@@ -62,4 +68,43 @@ describe("Demonstrating some useNavigate() tests ", () => {
         expect(getByText('Cadastre seu restaurante')).toBeTruthy()
     });
 
+
+    it("valor limite - cep - teste 1", () => {
+        const { getByText } = render(
+            <BrowserRouter>
+                <RestaurantSignUp 
+                            id={0}
+                            key={0}
+                            zipCode={cep_valor_lim.teste_1}/>
+            </BrowserRouter>
+        );
+
+        expect(getByText('Cadastre seu restaurante')).toBeTruthy()
+    });
+
+    it("valor limite - cep - teste 2", () => {
+        const { getByText } = render(
+            <BrowserRouter>
+                <RestaurantSignUp 
+                            id={0}
+                            key={0}
+                            zipCode={cep_valor_lim.teste_2}/>
+            </BrowserRouter>
+        );
+
+        expect(getByText('Cadastre seu restaurante')).toBeTruthy()
+    });
+
+    it("valor limite - cep - teste 3", () => {
+        const { getByText } = render(
+            <BrowserRouter>
+                <RestaurantSignUp 
+                            id={0}
+                            key={0}
+                            zipCode={cep_valor_lim.teste_3}/>
+            </BrowserRouter>
+        );
+
+        expect(getByText('Cadastre seu restaurante')).toBeTruthy()
+    });
 });
