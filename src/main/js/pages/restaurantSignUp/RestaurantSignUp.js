@@ -8,6 +8,7 @@ import Link from '@mui/material/Link';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
+import Alert from "@mui/material/Alert";
 import StorefrontIcon from '@mui/icons-material/Storefront';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -18,6 +19,15 @@ import Copyright from "../../components/Copyright";
 import { addStore } from "../../services/store";
 
 const theme = createTheme();
+
+const hasFullFilledForm = (form) => {
+  for (let key in form) {
+    if (!form[key]) {
+      return false;
+    }
+  }
+  return true;
+}
 
 export default function RestaurantSignUp() {
   const navigate = useNavigate();
@@ -41,6 +51,8 @@ export default function RestaurantSignUp() {
   const [addressCity, setAddressCity] = useState("");
   const [termsAccepted, setTermsAccepted] = useState(false);
 
+  const [error, setError] = useState(null);
+
   const handleEmailBlur = () => {
     setEmailError(!validateEmail(email))
   }
@@ -51,34 +63,38 @@ export default function RestaurantSignUp() {
 
   // TODO: link with database
   const handleSubmit = async (event) => {
+    event.preventDefault();
+
     const store = {
       name: name,
       email: email,
-      password: password,
       identityDocument: identityDocument,
       telephone: telephone,
       zipCode: zipCode,
       address: address,
       addressNumber: addressNumber,
-      addressComplement: addressComplement,
       addressState: addressState,
       addressCity: addressCity
     }
-    event.preventDefault();
+
+    if (!hasFullFilledForm(store)) {
+      setError('Preencha os Campos Obrigatórios!')
+      setTimeout(() => { setError(null) }, 2500)
+      return
+    }
+
+    store.addressComplement = addressComplement;
 
     await createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-        console.log(user);
+        addStore(store);
         navigate("/login")
       })
       .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log(errorCode, errorMessage);
+        setError(error.message);
+        setTimeout(() => { setError(null) }, 2500)
       })
-    
-    addStore(store);
   };
 
   return (
@@ -109,6 +125,8 @@ export default function RestaurantSignUp() {
               alignItems: 'left',
             }}
           >
+            {error && <Alert severity="error">{error}</Alert>}
+
             <StorefrontIcon sx={{ color: 'primary.main' }} />
             <Typography component="h1" variant="h4" sx={{ mt: 1 }}>
               Cadastre seu restaurante

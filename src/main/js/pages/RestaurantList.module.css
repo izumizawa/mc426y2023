@@ -14,14 +14,15 @@
 }
 
 .storesList {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    justify-content: center;
     width: 80%;
     margin: 0 auto;
 }
 
 @media (max-width: 450px) {
     .storesList {
-        flex-direction: column
+       grid-template-column: 1fr;
     }
   }

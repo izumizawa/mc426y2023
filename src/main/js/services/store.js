@@ -4,6 +4,8 @@ import {
   getDocs,
   getDoc,
   setDoc,
+  query,
+  where,
 } from "firebase/firestore"
 import { db } from "../config/firebase"
 
@@ -18,6 +20,20 @@ export async function getAllStores() {
   } catch (error) {
     console.log(error)
     return [];
+  }
+}
+
+export async function getStoreByName(name) {
+  try {
+    const _query = query(collectionRef, where("name", '==', name));
+    const { docs } = await getDocs(_query);
+
+    if (docs.length) return docs[0].data();
+    return null
+
+  } catch (error) {
+    console.log(error);
+    return null
   }
 }
 

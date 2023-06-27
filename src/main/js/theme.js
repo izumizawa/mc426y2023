@@ -53,9 +53,11 @@ const theme = createTheme({
     borderRadius: 8,
   },
   shadows: {
+    0: "0px 3px 30px rgba(160, 175, 255, 0.12)",
     1: "0px 3px 30px rgba(160, 175, 255, 0.12)",
     4: "0px 3px 30px rgba(160, 175, 255, 0.12)",
     8: "0px 3px 30px rgba(160, 175, 255, 0.12)",
+    16: "0px 3px 30px rgba(160, 175, 255, 0.12)",
   },
   typography: {
     h1: {
