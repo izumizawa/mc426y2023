@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import Card from "@mui/material/Card";
@@ -50,7 +50,7 @@ export default function ProductCard(props) {
   };
 
   const handleDelete = async () => {
-    await deleteProductsFromCatalogue(catalogueId, props.id)
+    await deleteProductsFromCatalogue("R3o4bdUuF3Til25xtrAn", props.id)
     setOpenDelete(false);
     props.updateProducts()
   }
