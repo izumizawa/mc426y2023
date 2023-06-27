@@ -24,8 +24,8 @@ export default function NewProductButton(props) {
   const [description, setDescription] = useState('');
   const [category, setCategory] = useState('');
 
-  const { getCurrentUser } = useContext(UserContext);
-  const { email } = getCurrentUser();
+  const { dataUser } = useContext(UserContext);
+  const { email, storeId } = dataUser;
   
   const handleClickOpen = () => {
     setOpen(true);
@@ -47,10 +47,7 @@ export default function NewProductButton(props) {
       category: category
     }
     
-    const storeId = await getStoreByEmail(email);
-    console.log("NewProductButton: storeId -> ", storeId);
-    
-    addProductsToCatalogue(storeId, product);
+    await addProductsToCatalogue(storeId, product);
     props.setReload(true);
     setOpen(false);
   }

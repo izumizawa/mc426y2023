@@ -4,19 +4,16 @@ import Stack from "@mui/material/Stack";
 import Donuts from "../assets/images/donuts.jpg";
 import { useState, useEffect } from "react";
 import { getProductsFromCatalogue } from "../services/catalogue";
-import { UserContext } from "../contexts/UserContext";
-import { getStoreByEmail } from "../services/store";
+import {useLocalStorage} from "../hooks/UseLocalStorage";
 
 export default function ProductList(props) {
   const [products, setProducts] = useState({ docs: [] })
 
-  const { getCurrentUser } = useContext(UserContext);
-  const { uid, email } = getCurrentUser();
-  
+  const [dataUser] = useLocalStorage('dataUser', "")
+  const { catalogueId } = dataUser;
+
   const updateProducts = () => {
-    const storeId = getStoreByEmail(email);
-    console.log("storeId: ", storeId);
-    getProductsFromCatalogue(storeId).then(e => {
+    getProductsFromCatalogue(catalogueId).then(e => {
       setProducts(e)
     })
   }

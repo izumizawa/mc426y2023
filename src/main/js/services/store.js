@@ -1,13 +1,5 @@
-import {
-  collection,
-  doc,
-  getDocs,
-  getDoc,
-  setDoc,
-  query,
-  where,
-} from "firebase/firestore"
-import { db } from "../config/firebase"
+import {collection, doc, getDoc, getDocs, query, setDoc, where,} from "firebase/firestore"
+import {db} from "../config/firebase"
 
 const storeCollectionRef = collection(db, 'store')
 const catalogueCollectionRef = collection(db, 'catalogue')
@@ -62,9 +54,9 @@ export async function getStoreByEmail(email) {
     return null;
   }
 
-  const store = stores.docs[0].data();
-  store.id = stores.docs[0].id;
-  return store.id;
+  const storeId = stores.docs[0].id;
+  const catalogueId = stores.docs[0].id;
+  return {...stores.docs[0].data(), storeId, catalogueId};
 }
 
 export async function addStore(store) {
