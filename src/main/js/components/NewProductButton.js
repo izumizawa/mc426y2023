@@ -47,7 +47,7 @@ export default function NewProductButton(props) {
       category: category
     }
     
-    await addProductsToCatalogue(storeId, product);
+    await addProductsToCatalogue("R3o4bdUuF3Til25xtrAn", product);
     props.setReload(true);
     setOpen(false);
   }
