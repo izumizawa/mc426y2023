@@ -14,8 +14,7 @@ import CloseIcon from "@mui/icons-material/CloseRounded";
 import Typography from "@mui/material/Typography";
 import AddIcon from "@mui/icons-material/AddRounded";
 import { addProductsToCatalogue } from "../services/catalogue";
-import { UserContext } from "../contexts/UserContext";
-import { getStoreByEmail } from "../services/store";
+import { useLocalStorage } from "../hooks/UseLocalStorage";
 
 export default function NewProductButton(props) {
   const [open, setOpen] = useState(false);
@@ -24,8 +23,8 @@ export default function NewProductButton(props) {
   const [description, setDescription] = useState('');
   const [category, setCategory] = useState('');
 
-  const { dataUser } = useContext(UserContext);
-  const { email, storeId } = dataUser;
+  const [dataUser] = useLocalStorage('dataUser', "")
+  const { catalogueId } = dataUser;
   
   const handleClickOpen = () => {
     setOpen(true);
@@ -47,7 +46,7 @@ export default function NewProductButton(props) {
       category: category
     }
     
-    await addProductsToCatalogue("R3o4bdUuF3Til25xtrAn", product);
+    await addProductsToCatalogue(catalogueId, product);
     props.setReload(true);
     setOpen(false);
   }

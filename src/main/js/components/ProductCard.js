@@ -50,7 +50,7 @@ export default function ProductCard(props) {
   };
 
   const handleDelete = async () => {
-    await deleteProductsFromCatalogue("R3o4bdUuF3Til25xtrAn", props.id)
+    await deleteProductsFromCatalogue(catalogueId, props.id)
     setOpenDelete(false);
     props.updateProducts()
   }

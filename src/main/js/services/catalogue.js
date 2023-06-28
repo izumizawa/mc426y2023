@@ -23,6 +23,10 @@ export async function getProductsFromCatalogue(catalogueId) {
     const junctionQ = query(junctionCol, where("catalogue", "==", catalogueId));
     const junctions = await getDocs(junctionQ);
 
+    if (junctions.empty) {
+        return { docs: [] }
+    }
+
     const productsCol = collection(db, 'product')
     const productDocs = junctions.docs.map(document => doc(db, `product/${document.data().product}`))
     const productsQ = query(productsCol, where('__name__', "in", productDocs))
