@@ -23,7 +23,7 @@
     "deploy": "gh-pages -d target/classes/public",
     "predeploy": "CI=false npm run build",
     "build": "react-app-rewired build",
-    "test": "jest",
+    "test": "jest --silent",
     "eject": "react-scripts eject"
   },
   "jest": {
