@@ -1,19 +1,12 @@
-import {
-  collection,
-  doc,
-  getDocs,
-  getDoc,
-  setDoc,
-  query,
-  where,
-} from "firebase/firestore"
-import { db } from "../config/firebase"
+import {collection, doc, getDoc, getDocs, query, setDoc, where,} from "firebase/firestore"
+import {db} from "../config/firebase"
 
-const collectionRef = collection(db, 'store')
+const storeCollectionRef = collection(db, 'store')
+const catalogueCollectionRef = collection(db, 'catalogue')
 
 export async function getAllStores() {
   try {
-    const { docs } = await getDocs(collectionRef);
+    const { docs } = await getDocs(storeCollectionRef);
     const storeList = docs.map(item => ({ ...item.data(), id: item.id }));
 
     return storeList;
@@ -25,7 +18,7 @@ export async function getAllStores() {
 
 export async function getStoreByName(name) {
   try {
-    const _query = query(collectionRef, where("name", '==', name));
+    const _query = query(storeCollectionRef, where("name", '==', name));
     const { docs } = await getDocs(_query);
 
     if (docs.length) return docs[0].data();
@@ -41,7 +34,7 @@ export async function getStoreByName(name) {
 export async function getStore(storeId) {
   const storeRef = doc(db, 'store', storeId);
   const storeSnap = await getDoc(storeRef);
-  const store = null;
+  let store = null;
 
   if (storeSnap.exists()) {
     store = storeSnap.data();
@@ -52,17 +45,34 @@ export async function getStore(storeId) {
   return store;
 }
 
+export async function getStoreByEmail(email) {
+  const storeQ = query(storeCollectionRef, where("email", "==", email));
+  const stores = await getDocs(storeQ);
+
+  if (stores.empty) {
+    console.log("No store found for the given email.");
+    return null;
+  }
+
+  const storeId = stores.docs[0].id;
+  const catalogueId = stores.docs[0].id;
+  return {...stores.docs[0].data(), storeId, catalogueId};
+}
+
 export async function addStore(store) {
   try {
-    const newStoreRef = doc(collectionRef);
-    await setDoc(newStoreRef, store);
+    const newStoreRef = doc(storeCollectionRef);
+    const newStoreDoc = await setDoc(newStoreRef, store);
+    const newCatalogueRef = doc(catalogueCollectionRef, newStoreRef.id);
+    await setDoc(newCatalogueRef, { storeId: newStoreRef.id });
+
+    return newStoreDoc;
   } catch (error) {
     throw new Error(error)
   }
 }
 
 export async function editStore(storeId, store) {
-  const storeCol = collectionRef;
-  const storeRef = doc(storeCol, storeId);
+  const storeRef = doc(storeCollectionRef, storeId);
   await setDoc(storeRef, store)
 }

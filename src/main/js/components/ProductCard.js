@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import Card from "@mui/material/Card";
@@ -20,6 +20,7 @@ import EditIcon from "@mui/icons-material/EditRounded";
 import CloseIcon from "@mui/icons-material/CloseRounded";
 import DeleteIcon from "@mui/icons-material/DeleteRounded";
 import { deleteProductsFromCatalogue, editProduct } from "../services/catalogue";
+import {useLocalStorage} from "../hooks/UseLocalStorage";
 
 export default function ProductCard(props) {
   const [openEdit, setOpenEdit] = useState(false);
@@ -28,6 +29,9 @@ export default function ProductCard(props) {
   const [description, setDescription] = useState(props.description);
   const [price, setPrice] = useState(props.price);
   const [category, setCategory] = useState(props.category);
+
+  const [dataUser] = useLocalStorage('dataUser', "");
+  const {catalogueId} = dataUser;
 
   const handleClickOpenEdit = () => {
     setOpenEdit(true);
@@ -45,20 +49,20 @@ export default function ProductCard(props) {
     setOpenDelete(false);
   };
 
-  const handleDelete = () => {
-    deleteProductsFromCatalogue("R3o4bdUuF3Til25xtrAn", props.id)
+  const handleDelete = async () => {
+    await deleteProductsFromCatalogue("R3o4bdUuF3Til25xtrAn", props.id)
     setOpenDelete(false);
     props.updateProducts()
   }
 
-  const handleEdit = () => {
+  const handleEdit = async () => {
     const product = {
       title: title,
       price: price,
       description: description,
       category: category
     }
-    editProduct(props.id, product)
+    await editProduct(props.id, product)
     setOpenEdit(false);
     props.updateProducts()
   }
