@@ -13,7 +13,7 @@ export default function ProductList(props) {
   const { catalogueId } = dataUser;
 
   const updateProducts = () => {
-    getProductsFromCatalogue("R3o4bdUuF3Til25xtrAn").then(e => {
+    getProductsFromCatalogue(catalogueId).then(e => {
       setProducts(e)
     })
   }
