@@ -1,19 +1,31 @@
-import React, { useState, useContext } from "react";
-import { AppBar, Box, Toolbar, IconButton, Typography, Menu, Container, Button, MenuItem } from "@mui/material"
+import React, {useState, useContext} from "react";
+import {
+  AppBar,
+  Box,
+  Toolbar,
+  IconButton,
+  Typography,
+  Menu,
+  Container,
+  Button,
+  MenuItem,
+} from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import AccountCircle from '@mui/icons-material/AccountCircle';
-import { useNavigate } from "react-router-dom";
-import { UserContext } from "../contexts/UserContext";
+import AccountCircle from "@mui/icons-material/AccountCircle";
+import {useNavigate} from "react-router-dom";
+import {UserContext} from "../contexts/UserContext";
 
-
-const pages = [{ label: "Cardápio", route: '/cardapios' }, { label: "Meu Cadastro", route: '' }];
+const pages = [
+  {label: "Cardápio", route: "/cardapios"},
+  {label: "Pedidos", route: "/pedidos"},
+  {label: "Meu Cadastro", route: ""},
+];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorEl, setAnchorEl] = useState(null);
   const navigate = useNavigate();
-  const { logout } = useContext(UserContext);
-
+  const {logout} = useContext(UserContext);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -24,8 +36,8 @@ function ResponsiveAppBar() {
   };
 
   const handleNavigation = (route) => {
-    navigate(route)
-  }
+    navigate(route);
+  };
 
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
@@ -35,7 +47,7 @@ function ResponsiveAppBar() {
     setAnchorEl(null);
   };
 
-  const handleLogout = async () => await logout()
+  const handleLogout = async () => await logout();
 
   return (
     <AppBar position="static">
@@ -47,12 +59,11 @@ function ResponsiveAppBar() {
             component="h1"
             sx={{
               mr: 2,
-              display: { xs: "none", md: "flex" },
+              display: {xs: "none", md: "flex"},
               fontWeight: 700,
               color: "inherit",
               textDecoration: "none",
-            }}
-          >
+            }}>
             COMU
           </Typography>
 
@@ -113,8 +124,7 @@ function ResponsiveAppBar() {
               <Button
                 key={page.route}
                 onClick={() => handleNavigation(page.route)}
-                sx={{ my: 2, color: "white", display: "block" }}
-              >
+                sx={{my: 2, color: "white", display: "block"}}>
                 {page.label}
               </Button>
             ))}
@@ -127,25 +137,23 @@ function ResponsiveAppBar() {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleMenu}
-              color="inherit"
-            >
+              color="inherit">
               <AccountCircle />
             </IconButton>
             <Menu
               id="menu-appbar"
               anchorEl={anchorEl}
               anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
+                vertical: "top",
+                horizontal: "right",
               }}
               keepMounted
               transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
+                vertical: "top",
+                horizontal: "right",
               }}
               open={Boolean(anchorEl)}
-              onClose={handleClose}
-            >
+              onClose={handleClose}>
               <MenuItem onClick={handleLogout}>Logout</MenuItem>
             </Menu>
           </div>
