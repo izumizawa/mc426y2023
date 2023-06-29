@@ -26,7 +26,8 @@ export default function OrderConfirmation() {
         contact: "(19) 90101-0101",
         status: "Recebido",
         items: items,
-        store: store.id
+        store: store.id,
+        totalPrice: Number(items.map(i => i.price).reduce ((acc, cur) => acc + parseFloat(cur), 0)).toFixed(2)
     }
 
     const updateOrder = (address) => {
