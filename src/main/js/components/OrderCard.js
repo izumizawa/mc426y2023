@@ -7,6 +7,7 @@ import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
 import OrderItem from "./OrderItem";
 import OrderInfo from "./OrderInfo";
+import OrderStatusDropdown from "./OrderStatusDropdown";
 
 export default function OrderCard(props) {
   const [expanded, setExpanded] = useState(false);
@@ -16,7 +17,7 @@ export default function OrderCard(props) {
   };
 
   const itemList = props.order.items.map(function (item) {
-    return <OrderItem item={item} />;
+    return <OrderItem key={item.id} item={item} />;
   });
 
   const expandButtonText = expanded ? "Ver menos" : "Ver mais";
@@ -32,19 +33,33 @@ export default function OrderCard(props) {
             width: "100%",
           }}>
           {/* TIMESTAMP + NÚMERO DO PEDIDO */}
-          <Typography variant="overline" color="text.secondary">
-            {props.order.timestamp}
-          </Typography>
           <Box
             sx={{
               display: "flex",
               flexDirection: "row",
               justifyContent: "space-between",
             }}>
-            <Typography variant="subtitle1">
-              Pedido nº {props.order.number}
-            </Typography>
-            <p>****SELECT AQUI***</p>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+              }}>
+                <Typography variant="overline" color="text.secondary">
+                  {props.order.timestamp}
+                </Typography>
+                <Typography variant="subtitle1">
+                  Pedido nº {props.order.number}
+                </Typography>
+            </Box>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
+              }}>
+              <OrderStatusDropdown order={props.order} />
+            </Box>
           </Box>
           <Divider style={{margin: "8px 0px 24px"}} />
 

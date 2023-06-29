@@ -1,53 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import AppBar from "../components/AppBar";
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
-import {useState} from "react";
 import OrderCard from "../components/OrderCard";
-
-const mockOrder = [
-  {
-    id: "1",
-    number: "6603",
-    timestamp: "19/06/2023 às 18h25",
-    items: [
-      {
-        id: "2",
-        title: "PF - Feijoada Completa com Adicional de Pururuca",
-        obs: "Sem cebola",
-        price: "34,00",
-      },
-      {
-        id: "3",
-        title: "Coquinha Gelada – Lata de 350ml",
-        price: "7,00",
-      },
-      {
-        id: "4",
-        title: "2x Pudins de Chocolate no Capricho",
-        price: "15,00",
-      },
-    ],
-    totalPrice: "56,00",
-    payment: "Débito Mastercard",
-    name: "Olívia Rodrigo de Souza",
-    contact: "(19) 97874 - 2938",
-    address: "Rua Treze de Dezembro, 22 - Casa | Barão Geraldo, Campinas – SP",
-    //enfiar aquk
-  },
-];
+import { getOrdersForStore } from "../services/order";
+import { useLocalStorage } from "../hooks/UseLocalStorage";
 
 export default function OrdersPage() {
-  //   const [reload, setReload] = useState(false);
-  const ordersList = mockOrder.map(function (order) {
-    return <OrderCard order={order} />;
+  const [dataUser] = useLocalStorage('dataUser', "")
+  const { storeId } = dataUser;
+
+  const [orders, setOrders] = useState({ docs: [] });
+
+  const updateOrders = () => {
+    console.log(storeId)
+    getOrdersForStore(storeId).then(e => {
+      setOrders(e);
+    });
+  }
+
+  useEffect(() => {
+    updateOrders();
+  }, []);
+
+  const orderList = orders.docs.map(function (o) {
+    const order = { id: o.id, ...o.data() }
+    return <OrderCard key={order.number} order={order} />
   });
 
   return (
     <div>
       <AppBar />
       <Box
-        justifyContent="flex-end"
         sx={{
           display: "flex",
           paddingTop: "56px",
@@ -55,9 +39,7 @@ export default function OrdersPage() {
           alignItems: "center",
         }}>
         <Stack direction="column" spacing={2}>
-          {ordersList}
-          {ordersList}
-          {ordersList}
+          {orderList}
         </Stack>
       </Box>
     </div>

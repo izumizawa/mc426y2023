@@ -3,7 +3,6 @@ import Typography from "@mui/material/Typography";
 import {Box} from "@mui/system";
 
 export default function OrderItem(props) {
-  const a = "aaakskakso";
   const obs = () => {
     if (props.item.obs === undefined) {
       return "";
@@ -18,6 +17,7 @@ export default function OrderItem(props) {
       );
     }
   };
+  
   return (
     <div style={{paddingBottom: "16px"}}>
       <Box
