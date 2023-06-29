@@ -8,14 +8,14 @@ exports[`Demonstrating some useNavigate() tests  Renders the About component 1`]
     className="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-4 MuiGrid-grid-md-7 css-1oz9l6o-MuiGrid-root"
   />
   <div
-    className="MuiPaper-root MuiPaper-elevation MuiPaper-elevation6 MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-8 MuiGrid-grid-md-5 css-gadse4-MuiPaper-root-MuiGrid-root"
+    className="MuiPaper-root MuiPaper-elevation MuiPaper-elevation6 MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-8 MuiGrid-grid-md-5 css-1hnk9rw-MuiPaper-root-MuiGrid-root"
   >
     <div
       className="MuiBox-root css-1dpd6mp"
     >
       <svg
         aria-hidden={true}
-        className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-ci5apu-MuiSvgIcon-root"
+        className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-u1p1uo-MuiSvgIcon-root"
         data-testid="StorefrontIcon"
         focusable="false"
         viewBox="0 0 24 24"
@@ -25,12 +25,12 @@ exports[`Demonstrating some useNavigate() tests  Renders the About component 1`]
         />
       </svg>
       <h1
-        className="MuiTypography-root MuiTypography-h4 css-kgr04e-MuiTypography-root"
+        className="MuiTypography-root MuiTypography-h4 css-tsj653-MuiTypography-root"
       >
         Cadastre seu restaurante
       </h1>
       <h1
-        className="MuiTypography-root MuiTypography-h6 css-qc420c-MuiTypography-root"
+        className="MuiTypography-root MuiTypography-h6 css-1d0rn2n-MuiTypography-root"
       >
         E receba mais clientes pelo nosso app 
         <i>
@@ -52,7 +52,7 @@ exports[`Demonstrating some useNavigate() tests  Renders the About component 1`]
               className="MuiFormControl-root MuiFormControl-marginDense MuiFormControl-fullWidth MuiTextField-root css-1z10yd4-MuiFormControl-root-MuiTextField-root"
             >
               <label
-                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-c4wa3v-MuiFormLabel-root-MuiInputLabel-root"
                 data-shrink={false}
                 htmlFor="restaurantName"
                 id="restaurantName-label"
@@ -60,14 +60,14 @@ exports[`Demonstrating some useNavigate() tests  Renders the About component 1`]
                 Nome do restaurante
                 <span
                   aria-hidden={true}
-                  className="MuiFormLabel-asterisk MuiInputLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+                  className="MuiFormLabel-asterisk MuiInputLabel-asterisk css-caazpq-MuiFormLabel-asterisk"
                 >
                    
                   *
                 </span>
               </label>
               <div
-                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
+                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1u4jlk7-MuiInputBase-root-MuiOutlinedInput-root"
                 onClick={[Function]}
               >
                 <input
@@ -109,7 +109,7 @@ exports[`Demonstrating some useNavigate() tests  Renders the About component 1`]
               className="MuiFormControl-root MuiFormControl-marginDense MuiFormControl-fullWidth MuiTextField-root css-1z10yd4-MuiFormControl-root-MuiTextField-root"
             >
               <label
-                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-c4wa3v-MuiFormLabel-root-MuiInputLabel-root"
                 data-shrink={false}
                 htmlFor=":r1:"
                 id=":r1:-label"
@@ -117,14 +117,14 @@ exports[`Demonstrating some useNavigate() tests  Renders the About component 1`]
                 E-mail
                 <span
                   aria-hidden={true}
-                  className="MuiFormLabel-asterisk MuiInputLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+                  className="MuiFormLabel-asterisk MuiInputLabel-asterisk css-caazpq-MuiFormLabel-asterisk"
                 >
                    
                   *
                 </span>
               </label>
               <div
-                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
+                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1u4jlk7-MuiInputBase-root-MuiOutlinedInput-root"
                 onClick={[Function]}
               >
                 <input
@@ -166,7 +166,7 @@ exports[`Demonstrating some useNavigate() tests  Renders the About component 1`]
               className="MuiFormControl-root MuiFormControl-marginDense MuiFormControl-fullWidth MuiTextField-root css-1z10yd4-MuiFormControl-root-MuiTextField-root"
             >
               <label
-                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-c4wa3v-MuiFormLabel-root-MuiInputLabel-root"
                 data-shrink={false}
                 htmlFor=":r2:"
                 id=":r2:-label"
@@ -174,14 +174,14 @@ exports[`Demonstrating some useNavigate() tests  Renders the About component 1`]
                 Senha
                 <span
                   aria-hidden={true}
-                  className="MuiFormLabel-asterisk MuiInputLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+                  className="MuiFormLabel-asterisk MuiInputLabel-asterisk css-caazpq-MuiFormLabel-asterisk"
                 >
                    
                   *
                 </span>
               </label>
               <div
-                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
+                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1u4jlk7-MuiInputBase-root-MuiOutlinedInput-root"
                 onClick={[Function]}
               >
                 <input
@@ -222,7 +222,7 @@ exports[`Demonstrating some useNavigate() tests  Renders the About component 1`]
               className="MuiFormControl-root MuiFormControl-marginDense MuiFormControl-fullWidth MuiTextField-root css-1z10yd4-MuiFormControl-root-MuiTextField-root"
             >
               <label
-                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-c4wa3v-MuiFormLabel-root-MuiInputLabel-root"
                 data-shrink={false}
                 htmlFor=":r3:"
                 id=":r3:-label"
@@ -230,14 +230,14 @@ exports[`Demonstrating some useNavigate() tests  Renders the About component 1`]
                 Confirme sua senha
                 <span
                   aria-hidden={true}
-                  className="MuiFormLabel-asterisk MuiInputLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+                  className="MuiFormLabel-asterisk MuiInputLabel-asterisk css-caazpq-MuiFormLabel-asterisk"
                 >
                    
                   *
                 </span>
               </label>
               <div
-                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
+                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1u4jlk7-MuiInputBase-root-MuiOutlinedInput-root"
                 onClick={[Function]}
               >
                 <input
@@ -278,7 +278,7 @@ exports[`Demonstrating some useNavigate() tests  Renders the About component 1`]
               className="MuiFormControl-root MuiFormControl-marginDense MuiFormControl-fullWidth MuiTextField-root css-1z10yd4-MuiFormControl-root-MuiTextField-root"
             >
               <label
-                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-c4wa3v-MuiFormLabel-root-MuiInputLabel-root"
                 data-shrink={false}
                 htmlFor=":r4:"
                 id=":r4:-label"
@@ -286,14 +286,14 @@ exports[`Demonstrating some useNavigate() tests  Renders the About component 1`]
                 CNPJ
                 <span
                   aria-hidden={true}
-                  className="MuiFormLabel-asterisk MuiInputLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+                  className="MuiFormLabel-asterisk MuiInputLabel-asterisk css-caazpq-MuiFormLabel-asterisk"
                 >
                    
                   *
                 </span>
               </label>
               <div
-                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
+                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1u4jlk7-MuiInputBase-root-MuiOutlinedInput-root"
                 onClick={[Function]}
               >
                 <input
@@ -334,7 +334,7 @@ exports[`Demonstrating some useNavigate() tests  Renders the About component 1`]
               className="MuiFormControl-root MuiFormControl-marginDense MuiFormControl-fullWidth MuiTextField-root css-1z10yd4-MuiFormControl-root-MuiTextField-root"
             >
               <label
-                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-c4wa3v-MuiFormLabel-root-MuiInputLabel-root"
                 data-shrink={false}
                 htmlFor=":r5:"
                 id=":r5:-label"
@@ -342,14 +342,14 @@ exports[`Demonstrating some useNavigate() tests  Renders the About component 1`]
                 Telefone
                 <span
                   aria-hidden={true}
-                  className="MuiFormLabel-asterisk MuiInputLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+                  className="MuiFormLabel-asterisk MuiInputLabel-asterisk css-caazpq-MuiFormLabel-asterisk"
                 >
                    
                   *
                 </span>
               </label>
               <div
-                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
+                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1u4jlk7-MuiInputBase-root-MuiOutlinedInput-root"
                 onClick={[Function]}
               >
                 <input
@@ -391,7 +391,7 @@ exports[`Demonstrating some useNavigate() tests  Renders the About component 1`]
               maxLength={10}
             >
               <label
-                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-c4wa3v-MuiFormLabel-root-MuiInputLabel-root"
                 data-shrink={false}
                 htmlFor=":r6:"
                 id=":r6:-label"
@@ -399,14 +399,14 @@ exports[`Demonstrating some useNavigate() tests  Renders the About component 1`]
                 CEP do Brasil
                 <span
                   aria-hidden={true}
-                  className="MuiFormLabel-asterisk MuiInputLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+                  className="MuiFormLabel-asterisk MuiInputLabel-asterisk css-caazpq-MuiFormLabel-asterisk"
                 >
                    
                   *
                 </span>
               </label>
               <div
-                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
+                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1u4jlk7-MuiInputBase-root-MuiOutlinedInput-root"
                 onClick={[Function]}
               >
                 <input
@@ -447,7 +447,7 @@ exports[`Demonstrating some useNavigate() tests  Renders the About component 1`]
               className="MuiFormControl-root MuiFormControl-marginDense MuiFormControl-fullWidth MuiTextField-root css-1z10yd4-MuiFormControl-root-MuiTextField-root"
             >
               <label
-                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-c4wa3v-MuiFormLabel-root-MuiInputLabel-root"
                 data-shrink={false}
                 htmlFor="address"
                 id="address-label"
@@ -455,14 +455,14 @@ exports[`Demonstrating some useNavigate() tests  Renders the About component 1`]
                 Endereço
                 <span
                   aria-hidden={true}
-                  className="MuiFormLabel-asterisk MuiInputLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+                  className="MuiFormLabel-asterisk MuiInputLabel-asterisk css-caazpq-MuiFormLabel-asterisk"
                 >
                    
                   *
                 </span>
               </label>
               <div
-                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
+                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1u4jlk7-MuiInputBase-root-MuiOutlinedInput-root"
                 onClick={[Function]}
               >
                 <input
@@ -504,7 +504,7 @@ exports[`Demonstrating some useNavigate() tests  Renders the About component 1`]
               className="MuiFormControl-root MuiFormControl-marginDense MuiFormControl-fullWidth MuiTextField-root css-1z10yd4-MuiFormControl-root-MuiTextField-root"
             >
               <label
-                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-c4wa3v-MuiFormLabel-root-MuiInputLabel-root"
                 data-shrink={false}
                 htmlFor=":r8:"
                 id=":r8:-label"
@@ -512,14 +512,14 @@ exports[`Demonstrating some useNavigate() tests  Renders the About component 1`]
                 Número
                 <span
                   aria-hidden={true}
-                  className="MuiFormLabel-asterisk MuiInputLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+                  className="MuiFormLabel-asterisk MuiInputLabel-asterisk css-caazpq-MuiFormLabel-asterisk"
                 >
                    
                   *
                 </span>
               </label>
               <div
-                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
+                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1u4jlk7-MuiInputBase-root-MuiOutlinedInput-root"
                 onClick={[Function]}
               >
                 <input
@@ -560,7 +560,7 @@ exports[`Demonstrating some useNavigate() tests  Renders the About component 1`]
               className="MuiFormControl-root MuiFormControl-marginDense MuiFormControl-fullWidth MuiTextField-root css-1z10yd4-MuiFormControl-root-MuiTextField-root"
             >
               <label
-                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-c4wa3v-MuiFormLabel-root-MuiInputLabel-root"
                 data-shrink={false}
                 htmlFor="addressComplement"
                 id="addressComplement-label"
@@ -568,7 +568,7 @@ exports[`Demonstrating some useNavigate() tests  Renders the About component 1`]
                 Complemento
               </label>
               <div
-                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
+                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1u4jlk7-MuiInputBase-root-MuiOutlinedInput-root"
                 onClick={[Function]}
               >
                 <input
@@ -608,7 +608,7 @@ exports[`Demonstrating some useNavigate() tests  Renders the About component 1`]
               className="MuiFormControl-root MuiFormControl-marginDense MuiFormControl-fullWidth MuiTextField-root css-1z10yd4-MuiFormControl-root-MuiTextField-root"
             >
               <label
-                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-c4wa3v-MuiFormLabel-root-MuiInputLabel-root"
                 data-shrink={false}
                 htmlFor="state"
                 id="state-label"
@@ -616,14 +616,14 @@ exports[`Demonstrating some useNavigate() tests  Renders the About component 1`]
                 Estado
                 <span
                   aria-hidden={true}
-                  className="MuiFormLabel-asterisk MuiInputLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+                  className="MuiFormLabel-asterisk MuiInputLabel-asterisk css-caazpq-MuiFormLabel-asterisk"
                 >
                    
                   *
                 </span>
               </label>
               <div
-                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
+                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1u4jlk7-MuiInputBase-root-MuiOutlinedInput-root"
                 onClick={[Function]}
               >
                 <input
@@ -665,7 +665,7 @@ exports[`Demonstrating some useNavigate() tests  Renders the About component 1`]
               className="MuiFormControl-root MuiFormControl-marginDense MuiFormControl-fullWidth MuiTextField-root css-1z10yd4-MuiFormControl-root-MuiTextField-root"
             >
               <label
-                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-c4wa3v-MuiFormLabel-root-MuiInputLabel-root"
                 data-shrink={false}
                 htmlFor="city"
                 id="city-label"
@@ -673,14 +673,14 @@ exports[`Demonstrating some useNavigate() tests  Renders the About component 1`]
                 Cidade
                 <span
                   aria-hidden={true}
-                  className="MuiFormLabel-asterisk MuiInputLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+                  className="MuiFormLabel-asterisk MuiInputLabel-asterisk css-caazpq-MuiFormLabel-asterisk"
                 >
                    
                   *
                 </span>
               </label>
               <div
-                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
+                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1u4jlk7-MuiInputBase-root-MuiOutlinedInput-root"
                 onClick={[Function]}
               >
                 <input
@@ -722,7 +722,7 @@ exports[`Demonstrating some useNavigate() tests  Renders the About component 1`]
               className="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd Mui-required css-j204z7-MuiFormControlLabel-root"
             >
               <span
-                className="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-root MuiCheckbox-colorPrimary css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
+                className="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-root MuiCheckbox-colorPrimary css-5uz02l-MuiButtonBase-root-MuiCheckbox-root"
                 onBlur={[Function]}
                 onContextMenu={[Function]}
                 onDragLeave={[Function]}
@@ -759,13 +759,13 @@ exports[`Demonstrating some useNavigate() tests  Renders the About component 1`]
                 </svg>
               </span>
               <span
-                className="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+                className="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-19khpb8-MuiTypography-root"
               >
                 Aceito os termos de compromisso
               </span>
               <span
                 aria-hidden={true}
-                className="MuiFormControlLabel-asterisk css-1x2jons-MuiFormControlLabel-asterisk"
+                className="MuiFormControlLabel-asterisk css-peu8ze-MuiFormControlLabel-asterisk"
               >
                  
                 *
@@ -776,7 +776,7 @@ exports[`Demonstrating some useNavigate() tests  Renders the About component 1`]
             className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <button
-              className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1yzjfrg-MuiButtonBase-root-MuiButton-root"
+              className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-6mrxya-MuiButtonBase-root-MuiButton-root"
               disabled={false}
               onBlur={[Function]}
               onContextMenu={[Function]}
@@ -807,7 +807,7 @@ exports[`Demonstrating some useNavigate() tests  Renders the About component 1`]
                 onClick={[Function]}
               >
                 <a
-                  className="MuiTypography-root MuiTypography-body2 MuiLink-root MuiLink-underlineAlways css-101ca9i-MuiTypography-root-MuiLink-root"
+                  className="MuiTypography-root MuiTypography-body2 MuiLink-root MuiLink-underlineAlways css-4wq7lo-MuiTypography-root-MuiLink-root"
                   onBlur={[Function]}
                   onFocus={[Function]}
                 >
@@ -818,7 +818,7 @@ exports[`Demonstrating some useNavigate() tests  Renders the About component 1`]
           </div>
         </div>
         <p
-          className="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter css-wc06ue-MuiTypography-root"
+          className="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter css-23o7cg-MuiTypography-root"
         >
           Copyright © 
           <a
