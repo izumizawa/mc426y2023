@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import StorefrontIcon from "@mui/icons-material/Storefront";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { ThemeProvider } from "@mui/material/styles";
 import { UserContext } from "../contexts/UserContext";
 import { Navigate, Link as LinkRouter } from "react-router-dom";
 import Copyright from "../components/Copyright";
@@ -17,7 +17,7 @@ import {
 } from "@mui/material";
 import { validateEmail } from "../helpers";
 
-const theme = createTheme();
+import theme from "../theme";
 
 export default function Login() {
   const [email, setEmail] = useState("");

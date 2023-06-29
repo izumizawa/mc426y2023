@@ -9,8 +9,7 @@ import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Link as LinkRouter } from "react-router-dom";
 import Copyright from '../../components/Copyright';
-
-const theme = createTheme();
+import theme from "../../theme";
 
 export default function Welcome() {
 
