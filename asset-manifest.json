@@ -1,0 +1,21 @@
+{
+  "main.css": "./static/css/main.5ccd54ef.chunk.css",
+  "main.js": "./static/js/main.404c9088.chunk.js",
+  "main.js.map": "./static/js/main.404c9088.chunk.js.map",
+  "runtime~main.js": "./static/js/runtime~main.ef5d3c31.js",
+  "runtime~main.js.map": "./static/js/runtime~main.ef5d3c31.js.map",
+  "static/js/2.bb68e9b2.chunk.js": "./static/js/2.bb68e9b2.chunk.js",
+  "static/js/2.bb68e9b2.chunk.js.map": "./static/js/2.bb68e9b2.chunk.js.map",
+  "static/js/3.4cd400a1.chunk.js": "./static/js/3.4cd400a1.chunk.js",
+  "static/js/3.4cd400a1.chunk.js.map": "./static/js/3.4cd400a1.chunk.js.map",
+  "index.html": "./index.html",
+  "precache-manifest.106717ff460748dfb5d7b14cd5bd84e5.js": "./precache-manifest.106717ff460748dfb5d7b14cd5bd84e5.js",
+  "service-worker.js": "./service-worker.js",
+  "static/css/main.5ccd54ef.chunk.css.map": "./static/css/main.5ccd54ef.chunk.css.map",
+  "static/media/donuts.jpg": "./static/media/donuts.a8a652e9.jpg",
+  "static/media/fanta.jpg": "./static/media/fanta.181920fb.jpg",
+  "static/media/frites.jpg": "./static/media/frites.6f07e8b6.jpg",
+  "static/media/misto.jpg": "./static/media/misto.dab685a4.jpg",
+  "static/media/pizza.jpg": "./static/media/pizza.03f10351.jpg",
+  "static/media/sushi.jpg": "./static/media/sushi.19308ab8.jpg"
+}
