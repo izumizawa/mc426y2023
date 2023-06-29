@@ -1,14 +1,17 @@
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import { updateOrder } from "../services/order";
+import OrderUpdateStorage from "../hooks/OrderUpdateStorage";
 
 export default function OrderStatusDropdown(props) {
+    const orderUpdateStorage = OrderUpdateStorage.getInstance();
+
     const handleChange = (value) => {
         const newStatus = value.target.value
         var order = {...props.order};
         order.status = newStatus;
         updateOrder(order);
-        props.updateOrders();
+        orderUpdateStorage.getObservable().notify();
     }
 
     const statusEnum = [
