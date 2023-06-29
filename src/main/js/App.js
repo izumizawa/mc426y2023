@@ -1,31 +1,33 @@
 import React from "react";
-import {HashRouter, Routes, Route} from "react-router-dom";
-import {UserStorage} from "./contexts/UserContext";
+import { HashRouter, Routes, Route } from "react-router-dom";
+import { UserStorage } from "./contexts/UserContext";
 
 import RestauranteList from "./pages/RestauranteList";
-import RestaurantDetails from "./pages/RestaurantDetails";
+import RestaurantDetails from './pages/RestaurantDetails';
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import PrivateRoute from "./components/PrivateRoute";
 import NotFound from "./pages/NotFound";
 import RestaurantSignUp from "./pages/restaurantSignUp/RestaurantSignUp";
 import Welcome from "./pages/restaurantSignUp/Welcome";
-import MenuPage from "./pages/MenuPage";
+import MenuPage from "./pages/MenuPage"
 import OrdersPage from "./pages/OrdersPage";
+import OrderConfirmation from "./pages/OrderConfirmation";
 
 const routes = [
-  {path: "/", component: <RestauranteList />},
-  {path: "/restaurantes/:id", component: <RestaurantDetails />},
-  {path: "/login", component: <Login />},
-  {path: "/boasvindas/restaurantes", component: <Welcome />},
-  {path: "/cadastro/restaurantes", component: <RestaurantSignUp />},
+  { path: "/", component: <RestauranteList /> },
+  { path: "/restaurantes/:id", component: <RestaurantDetails /> },
+  { path: "/login", component: <Login /> },
+  { path: "/boasvindas/restaurantes", component: <Welcome /> },
+  { path: "/cadastro/restaurantes", component: <RestaurantSignUp /> },
+  { path: "/confirmacao-pedido", component: <OrderConfirmation /> },
 ];
 
 const privateRoutes = [
-  {path: "/dashboard", component: <Dashboard />},
-  {path: "/cardapios", component: <MenuPage />},
-  {path: "/pedidos", component: <OrdersPage />},
-];
+  { path: "/dashboard", component: <Dashboard /> },
+  { path: "/cardapios", component: <MenuPage /> },
+  { path: "/pedidos", component: <OrdersPage /> },
+]
 
 function App() {
   return (
