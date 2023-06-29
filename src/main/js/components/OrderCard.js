@@ -58,7 +58,7 @@ export default function OrderCard(props) {
                 justifyContent: "center",
                 alignItems: "center"
               }}>
-              <OrderStatusDropdown order={props.order} />
+              <OrderStatusDropdown order={props.order} updateOrders={props.updateOrders} />
             </Box>
           </Box>
           <Divider style={{margin: "8px 0px 24px"}} />
@@ -82,3 +82,4 @@ export default function OrderCard(props) {
     </div>
   );
 }
+

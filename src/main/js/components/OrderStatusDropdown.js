@@ -1,14 +1,14 @@
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
-import React, { useState } from "react";
+import React from "react";
 import { updateOrder } from "../services/order";
 
 export default function OrderStatusDropdown(props) {
-
     const handleChange = (value) => {
         const newStatus = value.target.value
         var order = {...props.order};
         order.status = newStatus;
         updateOrder(order);
+        props.updateOrders();
     }
 
     const statusEnum = [
@@ -25,7 +25,8 @@ export default function OrderStatusDropdown(props) {
             <FormControl size="small">
                 <InputLabel id="status-label">Status</InputLabel>
                 <Select
-                    defaultValue={props.order.status == null ? "" : props.order.status}
+                    defaultValue={props.order.status}
+                    value={props.order.status}
                     labelId="status-label"
                     id="status"
                     label="Status"

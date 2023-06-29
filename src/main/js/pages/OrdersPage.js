@@ -10,12 +10,12 @@ export default function OrdersPage() {
   const [dataUser] = useLocalStorage('dataUser', "")
   const { storeId } = dataUser;
 
-  const [orders, setOrders] = useState({ docs: [] });
+  const [orders, setOrders] = useState([]);
 
   const updateOrders = () => {
-    console.log(storeId)
     getOrdersForStore(storeId).then(e => {
-      setOrders(e);
+      const newOrders = e.docs.map(o => { return { id: o.id, ...o.data() }} )
+      setOrders(newOrders);
     });
   }
 
@@ -23,9 +23,9 @@ export default function OrdersPage() {
     updateOrders();
   }, []);
 
-  const orderList = orders.docs.map(function (o) {
-    const order = { id: o.id, ...o.data() }
-    return <OrderCard key={order.number} order={order} />
+  const orderList = orders.map(function (o) {
+    const order = {id: o.id, ...o}
+    return <OrderCard key={order} order={order} updateOrders={updateOrders} />
   });
 
   return (
@@ -45,3 +45,4 @@ export default function OrdersPage() {
     </div>
   );
 }
+
