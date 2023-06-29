@@ -195,7 +195,7 @@ exports[`Demonstrating some useNavigate() tests  Renders the About component 1`]
                   onChange={[Function]}
                   onFocus={[Function]}
                   required={true}
-                  type="text"
+                  type="password"
                   value=""
                 />
                 <fieldset
@@ -251,7 +251,7 @@ exports[`Demonstrating some useNavigate() tests  Renders the About component 1`]
                   onChange={[Function]}
                   onFocus={[Function]}
                   required={true}
-                  type="text"
+                  type="password"
                   value=""
                 />
                 <fieldset
@@ -388,6 +388,7 @@ exports[`Demonstrating some useNavigate() tests  Renders the About component 1`]
           >
             <div
               className="MuiFormControl-root MuiFormControl-marginDense MuiFormControl-fullWidth MuiTextField-root css-1z10yd4-MuiFormControl-root-MuiTextField-root"
+              maxLength={10}
             >
               <label
                 className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
