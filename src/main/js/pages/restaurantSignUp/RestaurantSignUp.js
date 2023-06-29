@@ -62,7 +62,6 @@ export default function RestaurantSignUp() {
     setPasswordError((password === passwordConfirmation) ? false : true)
   }
 
-  // TODO: link with database
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -189,6 +188,7 @@ export default function RestaurantSignUp() {
                     fullWidth
                     label="Senha"
                     value={password}
+                    type="password"
                     onChange={({ target }) => setPassword(target.value)}
                   />
                 </Grid>
@@ -200,6 +200,7 @@ export default function RestaurantSignUp() {
                     fullWidth
                     label="Confirme sua senha"
                     value={passwordConfirmation}
+                    type="password"
                     onChange={({ target }) => setPasswordConfirmation(target.value)}
                     onBlur={handlePasswordBlur}
                     error={passwordError}

@@ -88,7 +88,7 @@ export default function Login() {
                   type='password'
                   placeholder="Senha"
                   value={password}
-                  onChange={({ target }) => setPassword(target.value)}
+                  onChange={({target}) => setPassword(target.value)}
                 />
               </Grid>
             </Grid>
