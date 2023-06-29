@@ -21,3 +21,9 @@ export async function updateOrder(order) {
     const orderRef = doc(orderCol, order.id);
     await setDoc(orderRef, order);
 }
+
+export async function addOrder(order) {
+    const orderCol = collection(db, 'order');
+    const orderRef = doc(orderCol);
+    await setDoc(orderRef, order);
+}

@@ -17,6 +17,7 @@ import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
 import { useNavigate, Link as LinkRouter } from "react-router-dom";
 import Copyright from "../../components/Copyright";
 import { addStore } from "../../services/store";
+import { getCEPData } from "../../services/cep";
 
 const theme = createTheme();
 
@@ -96,6 +97,24 @@ export default function RestaurantSignUp() {
       })
   };
 
+  const handleCEPChange = (cep) => {
+    if (cep.length > 9) {
+      cep = cep.slice(0, 9);
+    }
+    const formattedValue = cep.replace(/\D/g, '');
+    const formattedCEP = formattedValue.replace(/^(\d{5})(\d)/, '$1-$2');
+    setZipCode(formattedCEP);
+  }
+
+  const handleCEPBlur = async () => {
+    if (zipCode.length === 9) {
+      const { localidade, uf, logradouro } = await getCEPData(zipCode.replace(/\D/g, ''))
+      setAddress(logradouro);
+      setAddressCity(localidade)
+      setAddressState(uf);
+    }
+  }
+
   return (
     <ThemeProvider theme={theme}>
       <Grid container component="main" sx={{ height: '100vh' }}>
@@ -164,6 +183,7 @@ export default function RestaurantSignUp() {
                 <Grid item xs={12} sm={6}>
                   <TextField
                     margin="dense"
+                    type='password'
                     required
                     fullWidth
                     label="Senha"
@@ -176,6 +196,7 @@ export default function RestaurantSignUp() {
                   <TextField
                     margin="dense"
                     required
+                    type='password'
                     fullWidth
                     label="Confirme sua senha"
                     value={passwordConfirmation}
@@ -211,8 +232,10 @@ export default function RestaurantSignUp() {
                     required
                     fullWidth
                     label="CEP do Brasil"
+                    maxLength={10}
                     value={zipCode}
-                    onChange={({ target }) => setZipCode(target.value)}
+                    onChange={({ target }) => handleCEPChange(target.value)}
+                    onBlur={handleCEPBlur}
                   />
                 </Grid>
                 <Grid item xs={12} sm={9}>

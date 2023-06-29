@@ -1,8 +1,8 @@
-import React, {useState, useContext} from "react";
+import React, { useState, useContext } from "react";
 import StorefrontIcon from "@mui/icons-material/Storefront";
-import {createTheme, ThemeProvider} from "@mui/material/styles";
-import {UserContext} from "../contexts/UserContext";
-import {Navigate, Link as LinkRouter} from "react-router-dom";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { UserContext } from "../contexts/UserContext";
+import { Navigate, Link as LinkRouter } from "react-router-dom";
 import Copyright from "../components/Copyright";
 
 import {
@@ -15,7 +15,7 @@ import {
   Link,
   Paper,
 } from "@mui/material";
-import {validateEmail} from "../helpers";
+import { validateEmail } from "../helpers";
 
 const theme = createTheme();
 
@@ -24,7 +24,7 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState(false);
 
-  const {loginWithEmail, login, loading} = useContext(UserContext);
+  const { loginWithEmail, login, loading } = useContext(UserContext);
 
   const handleBlur = () => {
     setEmailError(!validateEmail(email));
@@ -38,7 +38,7 @@ export default function Login() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Grid container component="main" sx={{height: "100vh"}}>
+      <Grid container component="main" sx={{ height: "100vh" }}>
         <CssBaseline />
         <Grid
           item
@@ -66,28 +66,28 @@ export default function Login() {
               flexDirection: "column",
               alignItems: "left",
             }}>
-            <StorefrontIcon sx={{color: "primary.main"}} />
-            <Typography component="h1" variant="h4" sx={{my: 1}}>
+            <StorefrontIcon sx={{ color: "primary.main" }} />
+            <Typography component="h1" variant="h4" sx={{ my: 1 }}>
               Login
             </Typography>
             <Grid container spacing={2}>
               <Grid item xs={12}>
                 <TextField
-                  sx={{width: "100%"}}
+                  sx={{ width: "100%" }}
                   label="E-mail"
                   placeholder="E-mail"
                   value={email}
-                  onChange={({target}) => setEmail(target.value)}
+                  onChange={({ target }) => setEmail(target.value)}
                   onBlur={handleBlur}
                   error={emailError}
                 />
               </Grid>
               <Grid item xs={12}>
                 <TextField
-                  sx={{width: "100%"}}
+                  sx={{ width: "100%" }}
+                  type='password'
                   placeholder="Senha"
                   value={password}
-                  type="password"
                   onChange={({target}) => setPassword(target.value)}
                 />
               </Grid>
@@ -97,7 +97,7 @@ export default function Login() {
                 variant="contained"
                 onClick={handleSubmit}
                 disabled={loading}
-                sx={{my: 2}}
+                sx={{ my: 2 }}
                 fullWidth>
                 Entrar
               </Button>
@@ -111,7 +111,7 @@ export default function Login() {
                 </LinkRouter>
               </Grid>
             </Grid>
-            <Copyright sx={{mt: 2}} />
+            <Copyright sx={{ mt: 2 }} />
           </Box>
         </Grid>
       </Grid>
