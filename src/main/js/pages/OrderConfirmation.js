@@ -1,13 +1,38 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Formulario from "../components/Formulario";
 import {Typography} from "@mui/material";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
 import {useNavigate, useLocation} from "react-router-dom";
+import { addOrder } from '../services/order';
 
 export default function OrderConfirmation() {
     const navigate = useNavigate();
-    const { car } = useLocation().state;
+    const { car, store } = useLocation().state;
+
+    const items = car.map(item => {
+        return {
+            id: Math.floor(Math.random() * 100),
+            title: "" + item.quantity + "x " + item.title,
+            obs: "",
+            price: item.price
+        }
+    })
+
+    const order = {
+        number: Math.floor(Math.random() * 1000),
+        timestamp: "19/06/2023 às 18h25",
+        payment: "Crédito Mastercard",
+        contact: "(19) 90101-0101",
+        status: "Recebido",
+        items: items,
+        store: store.id
+    }
+
+    const updateOrder = (address) => {
+        order.address = address;
+        addOrder(order);
+    }
 
     return <>
         <header
@@ -31,7 +56,7 @@ export default function OrderConfirmation() {
                     </li>
                 ))}
             </ul>
-            <Formulario />
+            <Formulario updateOrder={updateOrder} />
         </main>
     </>
 }

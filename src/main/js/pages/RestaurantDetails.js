@@ -43,7 +43,7 @@ export default function RestauranteDetails(props) {
     }, [])
 
     const handleFinish = () => {
-        navigate('/confirmacao-pedido',  { state: { car }})
+        navigate('/confirmacao-pedido',  { state: { car, store } })
     }
 
     return (

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import {TextField, Button, Typography, Alert} from '@mui/material';
 import {useNavigate} from "react-router-dom";
 
-function Formulario() {
+function Formulario(props) {
     const navigate = useNavigate();
     const [cep, setCep] = useState('');
     const [endereco, setEndereco] = useState('');
@@ -13,6 +13,9 @@ function Formulario() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        const address = "" + endereco + ", " + numero + ", " + cep;
+        props.updateOrder(address);
 
         setCep('');
         setEndereco('');
@@ -26,7 +29,6 @@ function Formulario() {
             setSendOrder(false);
             navigate('/')
         }, 3000)
-
     };
 
     return (
