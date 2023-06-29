@@ -87,6 +87,7 @@ export default function Login() {
                   sx={{width: "100%"}}
                   placeholder="Senha"
                   value={password}
+                  type="password"
                   onChange={({target}) => setPassword(target.value)}
                 />
               </Grid>
