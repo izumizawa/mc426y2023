@@ -18,8 +18,7 @@ import { useNavigate, Link as LinkRouter } from "react-router-dom";
 import Copyright from "../../components/Copyright";
 import { addStore } from "../../services/store";
 import { getCEPData } from "../../services/cep";
-
-const theme = createTheme();
+import theme from "../../theme";
 
 const hasFullFilledForm = (form) => {
   for (let key in form) {
