@@ -18,7 +18,7 @@ import {UserContext} from "../contexts/UserContext";
 const pages = [
   {label: "Cardápio", route: "/cardapios"},
   {label: "Pedidos", route: "/pedidos"},
-  {label: "Meu Cadastro", route: ""},
+  {label: "Meu Cadastro", route: "/perfil"},
 ];
 
 function ResponsiveAppBar() {

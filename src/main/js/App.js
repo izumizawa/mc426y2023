@@ -13,6 +13,7 @@ import Welcome from "./pages/restaurantSignUp/Welcome";
 import MenuPage from "./pages/MenuPage"
 import OrdersPage from "./pages/OrdersPage";
 import OrderConfirmation from "./pages/OrderConfirmation";
+import RestaurantProfile from "./pages/RestaurantProfile";
 
 const routes = [
   { path: "/", component: <RestauranteList /> },
@@ -27,6 +28,7 @@ const privateRoutes = [
   { path: "/dashboard", component: <Dashboard /> },
   { path: "/cardapios", component: <MenuPage /> },
   { path: "/pedidos", component: <OrdersPage /> },
+  { path: "/perfil", component: <RestaurantProfile /> },
 ]
 
 function App() {

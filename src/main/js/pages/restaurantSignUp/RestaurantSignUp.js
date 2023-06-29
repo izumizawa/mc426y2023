@@ -61,7 +61,6 @@ export default function RestaurantSignUp() {
     setPasswordError((password === passwordConfirmation) ? false : true)
   }
 
-  // TODO: link with database
   const handleSubmit = async (event) => {
     event.preventDefault();
 
