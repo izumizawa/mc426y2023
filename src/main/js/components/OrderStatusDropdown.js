@@ -8,7 +8,7 @@ export default function OrderStatusDropdown(props) {
 
     const handleChange = (value) => {
         const newStatus = value.target.value
-        var order = {...props.order};
+        var order = { ...props.order };
         order.status = newStatus;
         updateOrder(order);
         orderUpdateStorage.getObservable().notify();
@@ -21,15 +21,15 @@ export default function OrderStatusDropdown(props) {
         'Finalizado'
     ]
 
-    const statusList = statusEnum.map(s => <MenuItem key={s} value={s}>{s}</MenuItem>)
+    const statusList = statusEnum.map(s => <MenuItem key={s} value={s ? s : ""}>{s}</MenuItem>)
 
     return (
         <div>
             <FormControl size="small">
                 <InputLabel id="status-label">Status</InputLabel>
                 <Select
-                    defaultValue={props.order.status}
-                    value={props.order.status}
+                    defaultValue={props.order.status ? props.order.status : ""}
+                    value={props.order.status ? props.order.status : ""}
                     labelId="status-label"
                     id="status"
                     label="Status"
